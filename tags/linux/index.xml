@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Linux on Ahmed Alnour</title>
-    <link>https://ahmedalnour.com/tags/linux/</link>
-    <description>Recent content in Linux on Ahmed Alnour</description>
+    <title>Linux on Ahmed Elnour</title>
+    <link>https://ahmedelnour.com/tags/linux/</link>
+    <description>Recent content in Linux on Ahmed Elnour</description>
     <image>
-      <title>Ahmed Alnour</title>
-      <url>https://ahmedalnour.com/images/blog_cover.jpg</url>
-      <link>https://ahmedalnour.com/images/blog_cover.jpg</link>
+      <title>Ahmed Elnour</title>
+      <url>https://ahmedelnour.com/images/blog_cover.jpg</url>
+      <link>https://ahmedelnour.com/images/blog_cover.jpg</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.154.2</generator>
     <language>en</language>
     <lastBuildDate>Sat, 08 Feb 2025 23:22:00 +0200</lastBuildDate>
-    <atom:link href="https://ahmedalnour.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ahmedelnour.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ما هو لينكس؟</title>
-      <link>https://ahmedalnour.com/posts/what-is-linux/</link>
+      <link>https://ahmedelnour.com/posts/what-is-linux/</link>
       <pubDate>Sat, 08 Feb 2025 23:22:00 +0200</pubDate>
-      <guid>https://ahmedalnour.com/posts/what-is-linux/</guid>
+      <guid>https://ahmedelnour.com/posts/what-is-linux/</guid>
       <description>ما هو لينكس؟</description>
     </item>
   </channel>

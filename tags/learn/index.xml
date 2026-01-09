@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Learn on Ahmed Alnour</title>
-    <link>https://ahmedalnour.com/tags/learn/</link>
-    <description>Recent content in Learn on Ahmed Alnour</description>
+    <title>Learn on Ahmed Elnour</title>
+    <link>https://ahmedelnour.com/tags/learn/</link>
+    <description>Recent content in Learn on Ahmed Elnour</description>
     <image>
-      <title>Ahmed Alnour</title>
-      <url>https://ahmedalnour.com/images/blog_cover.jpg</url>
-      <link>https://ahmedalnour.com/images/blog_cover.jpg</link>
+      <title>Ahmed Elnour</title>
+      <url>https://ahmedelnour.com/images/blog_cover.jpg</url>
+      <link>https://ahmedelnour.com/images/blog_cover.jpg</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.154.2</generator>
     <language>en</language>
     <lastBuildDate>Thu, 06 Feb 2025 21:58:57 +0200</lastBuildDate>
-    <atom:link href="https://ahmedalnour.com/tags/learn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ahmedelnour.com/tags/learn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>مصادر تعلم الرياضيات</title>
-      <link>https://ahmedalnour.com/posts/learn-maths/</link>
+      <link>https://ahmedelnour.com/posts/learn-maths/</link>
       <pubDate>Thu, 06 Feb 2025 21:58:57 +0200</pubDate>
-      <guid>https://ahmedalnour.com/posts/learn-maths/</guid>
+      <guid>https://ahmedelnour.com/posts/learn-maths/</guid>
       <description>مصادر تعلم الرياضيات</description>
     </item>
     <item>
       <title>تعلم اللغة الألمانية</title>
-      <link>https://ahmedalnour.com/posts/learn-german/</link>
+      <link>https://ahmedelnour.com/posts/learn-german/</link>
       <pubDate>Tue, 04 Feb 2025 16:44:19 +0200</pubDate>
-      <guid>https://ahmedalnour.com/posts/learn-german/</guid>
+      <guid>https://ahmedelnour.com/posts/learn-german/</guid>
       <description>مصادر تعلم اللغة الألمانية</description>
     </item>
   </channel>

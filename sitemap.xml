@@ -2,43 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ahmedalnour.com/posts/about/</loc>
+    <loc>https://ahmedelnour.com/posts/about/</loc>
     <lastmod>2024-07-11T23:20:01+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/</loc>
+    <loc>https://ahmedelnour.com/</loc>
     <lastmod>2025-02-08T23:22:00+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/tags/linux/</loc>
+    <loc>https://ahmedelnour.com/tags/linux/</loc>
     <lastmod>2025-02-08T23:22:00+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/posts/</loc>
+    <loc>https://ahmedelnour.com/posts/</loc>
     <lastmod>2025-02-08T23:22:00+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/tags/</loc>
+    <loc>https://ahmedelnour.com/tags/</loc>
     <lastmod>2025-02-08T23:22:00+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/posts/what-is-linux/</loc>
+    <loc>https://ahmedelnour.com/posts/what-is-linux/</loc>
     <lastmod>2025-02-08T23:22:00+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/tags/learn/</loc>
+    <loc>https://ahmedelnour.com/tags/learn/</loc>
     <lastmod>2025-02-06T21:58:57+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/tags/resources/</loc>
+    <loc>https://ahmedelnour.com/tags/resources/</loc>
     <lastmod>2025-02-06T21:58:57+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/posts/learn-maths/</loc>
+    <loc>https://ahmedelnour.com/posts/learn-maths/</loc>
     <lastmod>2025-02-06T21:58:57+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/posts/learn-german/</loc>
+    <loc>https://ahmedelnour.com/posts/learn-german/</loc>
     <lastmod>2025-02-04T16:44:19+02:00</lastmod>
   </url><url>
-    <loc>https://ahmedalnour.com/info/</loc>
-    <lastmod>2024-07-12T21:57:06+02:00</lastmod>
+    <loc>https://ahmedelnour.com/archives/</loc>
   </url><url>
-    <loc>https://ahmedalnour.com/archives/</loc>
+    <loc>https://ahmedelnour.com/categories/</loc>
   </url><url>
-    <loc>https://ahmedalnour.com/categories/</loc>
-  </url><url>
-    <loc>https://ahmedalnour.com/search/</loc>
+    <loc>https://ahmedelnour.com/search/</loc>
   </url>
 </urlset>
