@@ -1,45 +1,208 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ahmed Elnour</title>
-    <link>https://ahmedelnour.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Ahmed Elnour</description>
-    <image>
-      <title>Ahmed Elnour</title>
-      <url>https://ahmedelnour.com/images/blog_cover.jpg</url>
-      <link>https://ahmedelnour.com/images/blog_cover.jpg</link>
-    </image>
-    <generator>Hugo -- 0.154.2</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 08 Feb 2025 23:22:00 +0200</lastBuildDate>
-    <atom:link href="https://ahmedelnour.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Who am I?</title>
-      <link>https://ahmedelnour.com/posts/about/</link>
+      <link>http://localhost:1313/posts/about/</link>
       <pubDate>Thu, 11 Jul 2024 23:20:01 +0200</pubDate>
-      <guid>https://ahmedelnour.com/posts/about/</guid>
-      <description>Welcome to my website, join me in my journey and let’s have fun together</description>
+      <guid>http://localhost:1313/posts/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a game developer who&amp;rsquo;s eager to create fun, interactive and polished games. I&amp;rsquo;m always challenging myself to explore new things and push the boundaries of what&amp;rsquo;s possible.&lt;/p&gt;&#xA;&lt;p&gt;I have 5 years of experience in the industry, and I&amp;rsquo;ve worked on a variety of projects. I&amp;rsquo;m skilled in a variety of programming languages and game engines, and I&amp;rsquo;m always learning new things.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m also a problem solver and creative thinker and I&amp;rsquo;m always coming up with new ideas. I&amp;rsquo;m excited to share my games with the world, and I hope to help and inspire others to pursue their dreams of becoming game developers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ما هو لينكس؟</title>
-      <link>https://ahmedelnour.com/posts/what-is-linux/</link>
+      <link>http://localhost:1313/posts/what-is-linux/</link>
       <pubDate>Sat, 08 Feb 2025 23:22:00 +0200</pubDate>
-      <guid>https://ahmedelnour.com/posts/what-is-linux/</guid>
-      <description>ما هو لينكس؟</description>
+      <guid>http://localhost:1313/posts/what-is-linux/</guid>
+      <description>&lt;h1 id=&#34;ما-هو-لينكس&#34;&gt;ما هو لينكس؟&lt;/h1&gt;&#xA;&lt;p&gt;لينكس هو نظام تشغيل مفتوح المصدر لأجهزة الحاسوب و السيرفرات و الهاتف و الembded devices و غيرها الكثير.&lt;/p&gt;&#xA;&lt;h2 id=&#34;استخدماته&#34;&gt;استخدماته&lt;/h2&gt;&#xA;&lt;p&gt;للينكس نسخ متعددة distrobutions أو distros، و لكل نسخة توجهاتها و أهدافها و فلسفتها و فئتها المستهدفة، ف Knoppix Linux كمثال يستخدم لاسترجاع البيانات من الأقراص التالفة، و حل العديد من المشاكل التقنية الأخرى. و أيضا Kali Linux اللذي يستخدمه محترفوا حماية المعلومات، و Android للهواتف المحمولة . و بصفة عامة فإن اللينكس يسهل حياة المطورين لاحتوائه على كل الأدوات tools المستخدمة في التطوير و يتم تحديثها أولا بأول.&#xA;تطوير نسخ اللينكس يختلف من واحدة لأخرى فبعضها يتم تطويره من المجتمع community مثل Debian و Gentoo، و بعضها تجاري لاستخدام المؤسسات مثل Red Hat و SUSE، و بعضها يجمع بين اللإثنين مثل Fedora و Ubuntu.&lt;/p&gt;</description>
     </item>
     <item>
       <title>مصادر تعلم الرياضيات</title>
-      <link>https://ahmedelnour.com/posts/learn-maths/</link>
+      <link>http://localhost:1313/posts/learn-maths/</link>
       <pubDate>Thu, 06 Feb 2025 21:58:57 +0200</pubDate>
-      <guid>https://ahmedelnour.com/posts/learn-maths/</guid>
-      <description>مصادر تعلم الرياضيات</description>
+      <guid>http://localhost:1313/posts/learn-maths/</guid>
+      <description>&lt;h1 id=&#34;مصادر-تعلم-الرياضيات-من-الصفر&#34;&gt;مصادر تعلم الرياضيات من الصفر&lt;/h1&gt;&#xA;&lt;h2 id=&#34;خارطة-الرياضيات&#34;&gt;خارطة الرياضيات&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;الفيديو دا بتكلم عن أقسام الرياضيات مع شرح بسيط لكل قسم، بنصح بيه في البداية عشان بدي فكرة عامة للموضوع:&lt;br&gt;&#xA;&lt;a href=&#34;https://youtu.be/OmJ-4B-mS-Y?si=TADRpf3UtIOiAycP&#34;&gt;https://youtu.be/OmJ-4B-mS-Y?si=TADRpf3UtIOiAycP&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;الصورة دي برضو roadmap لكن الفرق أنها بتديك كتب لكل مجال، حأرسلها برضو تحت للتحميل:&lt;br&gt;&#xA;&lt;a href=&#34;https://raw.githubusercontent.com/TalalAlrawajfeh/mathematics-roadmap/master/mathematics-roadmap.jpg&#34;&gt;https://raw.githubusercontent.com/TalalAlrawajfeh/mathematics-roadmap/master/mathematics-roadmap.jpg&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;السب ريديت حق الرياضيات، مصدر ممتاز جدا و حتة للتواصل مع ناس تانيين مهتمين بالمجال، ممكن تبحث فيه عن أي موضوع أو roadmap و غالبا حيكون في بوست ليها:&lt;br&gt;&#xA;&lt;a href=&#34;https://www.reddit.com/r/math&#34;&gt;https://www.reddit.com/r/math&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>تعلم اللغة الألمانية</title>
-      <link>https://ahmedelnour.com/posts/learn-german/</link>
+      <link>http://localhost:1313/posts/learn-german/</link>
       <pubDate>Tue, 04 Feb 2025 16:44:19 +0200</pubDate>
-      <guid>https://ahmedelnour.com/posts/learn-german/</guid>
-      <description>مصادر تعلم اللغة الألمانية</description>
+      <guid>http://localhost:1313/posts/learn-german/</guid>
+      <description>&lt;h1 id=&#34;تعلم-اللغة-الألمانية&#34;&gt;تعلم اللغة الألمانية&lt;/h1&gt;&#xA;&lt;p&gt;البداية ممكن تكون بتطبيق Duolingo، بمشي معاك شوية شوية و بديك أساسيات كويسة بعديه تشوف كتب أو فيديوهات أو كورسات حسب البنفع معاك&lt;/p&gt;&#xA;&lt;h2 id=&#34;كتب-و-dictionaries&#34;&gt;كتب و Dictionaries&lt;/h2&gt;&#xA;&lt;p&gt;كتب Menschen كلها من أول ليفل، ممتازة جدا و بتوضح القواعد و فيها تمارين كويسة&lt;/p&gt;&#xA;&lt;p&gt;و برضو مهم يكون عندك Dictionary:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://dict.leo.org/german-english/&#34;&gt;https://dict.leo.org/german-english/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linguee.com/english-german&#34;&gt;https://www.linguee.com/english-german&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.arabdict.com/m/?lang=en&amp;amp;dict=de&#34;&gt;https://www.arabdict.com/m/?lang=en&amp;amp;dict=de&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;قنوات-و-مواقع&#34;&gt;قنوات و مواقع&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;موقع Piece of German:&#xA;&lt;a href=&#34;https://www.pieceofgerman.com/&#34;&gt;https://www.pieceofgerman.com/&lt;/a&gt;&#xA;عنده خطط و كورسات على حسب المستوى الدايره&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;سلسلة Nicos Weg في قناة DW الألمانية:&#xA;&lt;a href=&#34;https://youtu.be/efqCawQxHz0&#34;&gt;https://youtu.be/efqCawQxHz0&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EEESE Form Annoucement</title>
+      <link>http://localhost:1313/posts/eeese-form-annoucement/</link>
+      <pubDate>Fri, 12 Jul 2024 22:03:11 +0200</pubDate>
+      <guid>http://localhost:1313/posts/eeese-form-annoucement/</guid>
+      <description>&lt;p&gt;لو بتقرا الكلام دا، في احتمال ٨٠ بالمية أنك تكون إنسان.&#xA;هنا بجي سؤال مهم جدا: شنو البميز الإنسان عن باقي الكائنات؟&lt;/p&gt;&#xA;&lt;p&gt;في حاجات كتيرة لكن أرح نركز على حاجة واحدة بس، و هي سرعة التطور.&lt;/p&gt;&#xA;&lt;p&gt;أول ما ولدوك كنت ما فاهم حاجة و ما بتقدر تعمل حاجة، شوية شوية بتكتسب مهارات زي الكلام و المشي، حبة حبة بتقعد تكتسب مهارات جديدة و تطور مهاراتك العندك لحدي ما وصلت المرحلة الانت فيها هسي.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>http://localhost:1313/info/tutorial/</link>
+      <pubDate>Fri, 12 Jul 2024 21:57:06 +0200</pubDate>
+      <guid>http://localhost:1313/info/tutorial/</guid>
+      <description>&lt;p&gt;this is how you use this tool:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;open the box&lt;/li&gt;&#xA;&lt;li&gt;use the tool&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Test Post</title>
+      <link>http://localhost:1313/posts/test-post/</link>
+      <pubDate>Fri, 12 Jul 2024 21:56:14 +0200</pubDate>
+      <guid>http://localhost:1313/posts/test-post/</guid>
+      <description>&lt;h1 id=&#34;main&#34;&gt;main&lt;/h1&gt;&#xA;&lt;h2 id=&#34;sub1&#34;&gt;sub1&lt;/h2&gt;&#xA;&lt;p&gt;Hello :wave: :+1: :joy:&lt;/p&gt;&#xA;&lt;h2 id=&#34;sub2&#34;&gt;sub2&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ssub1&#34;&gt;ssub1&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; datetime &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; datetime&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;t &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; datetime&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;now()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ahmed &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Ahmed()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(ahmed&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;say_hi(param1, op&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;))&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ssub2&#34;&gt;ssub2&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/me.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;sssub1&#34;&gt;sssub1&lt;/h4&gt;&#xA;&lt;p&gt;hi there&lt;/p&gt;&#xA;&lt;h4 id=&#34;sssub2&#34;&gt;sssub2&lt;/h4&gt;&#xA;&lt;p&gt;hi there 2&lt;/p&gt;&#xA;&lt;h1 id=&#34;main2&#34;&gt;main2&lt;/h1&gt;&#xA;&lt;p&gt;what&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blog Post 1</title>
+      <link>http://localhost:1313/posts/blog-post-1/</link>
+      <pubDate>Sat, 18 Jun 2022 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-post-1/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>News Post 1</title>
+      <link>http://localhost:1313/posts/news-post-1/</link>
+      <pubDate>Wed, 18 May 2022 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/news-post-1/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>News Post 2</title>
+      <link>http://localhost:1313/posts/news-post-2/</link>
+      <pubDate>Mon, 18 Apr 2022 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/news-post-2/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>News Post 4</title>
+      <link>http://localhost:1313/posts/news-post-4/</link>
+      <pubDate>Fri, 18 Mar 2022 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/news-post-4/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>News Post 5</title>
+      <link>http://localhost:1313/posts/news-post-5/</link>
+      <pubDate>Fri, 18 Mar 2022 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/news-post-5/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>News Post 6</title>
+      <link>http://localhost:1313/posts/news-post-6/</link>
+      <pubDate>Fri, 18 Mar 2022 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/news-post-6/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>News Post 7</title>
+      <link>http://localhost:1313/posts/news-post-7/</link>
+      <pubDate>Fri, 18 Mar 2022 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/news-post-7/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;h1-heading-blush&#34;&gt;h1 Heading :blush:&lt;/h1&gt;&#xA;&lt;h2 id=&#34;h2-heading&#34;&gt;h2 Heading&lt;/h2&gt;&#xA;&lt;h3 id=&#34;h3-heading&#34;&gt;h3 Heading&lt;/h3&gt;&#xA;&lt;h4 id=&#34;h4-heading&#34;&gt;h4 Heading&lt;/h4&gt;&#xA;&lt;h5 id=&#34;h5-heading&#34;&gt;h5 Heading&lt;/h5&gt;&#xA;&lt;h6 id=&#34;h6-heading&#34;&gt;h6 Heading&lt;/h6&gt;&#xA;&lt;h2 id=&#34;horizontal-rules&#34;&gt;Horizontal Rules&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;typographic-replacements&#34;&gt;Typographic replacements&lt;/h2&gt;&#xA;&lt;p&gt;Enable typographer option to see result.&lt;/p&gt;&#xA;&lt;p&gt;(c) (C) (r) (R) (tm) (TM) (p) (P) +-&lt;/p&gt;&#xA;&lt;p&gt;test.. test&amp;hellip; test&amp;hellip;.. test?&amp;hellip;.. test!&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;!!!!!! ???? ,,  &amp;ndash; &amp;mdash;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Smartypants, double quotes&amp;rdquo; and &amp;lsquo;single quotes&amp;rsquo;&lt;/p&gt;&#xA;&lt;h2 id=&#34;emphasis&#34;&gt;Emphasis&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;This is italic text&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;del&gt;Strikethrough&lt;/del&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Blockquotes can also be nested&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blog Post 2</title>
+      <link>http://localhost:1313/posts/blog-post-2/</link>
+      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-post-2/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>Blog Post 3</title>
+      <link>http://localhost:1313/posts/blog-post-3/</link>
+      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-post-3/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>Blog Post 4</title>
+      <link>http://localhost:1313/posts/blog-post-4/</link>
+      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-post-4/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>Blog Post 5</title>
+      <link>http://localhost:1313/posts/blog-post-5/</link>
+      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-post-5/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>Blog Post 6</title>
+      <link>http://localhost:1313/posts/blog-post-6/</link>
+      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-post-6/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>Blog Post 7</title>
+      <link>http://localhost:1313/posts/blog-post-7/</link>
+      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/blog-post-7/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Sat, 18 Dec 2021 03:10:36 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>News Post 3</title>
+      <link>http://localhost:1313/posts/news-post-3/</link>
+      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/posts/news-post-3/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus, odio nec venenatis lacinia, lacus lectus varius nisi, in tristique mi purus ut libero.</description>
+    </item>
+    <item>
+      <title>Prose</title>
+      <link>http://localhost:1313/prose/</link>
+      <pubDate>Sat, 18 Dec 2021 11:10:36 +0800</pubDate>
+      <guid>http://localhost:1313/prose/</guid>
+      <description>&lt;h2 id=&#34;tailwindcsstypography&#34;&gt;@tailwindcss/typography&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/tailwindlabs/tailwindcss-typography&#34;&gt;View on GitHub&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;p&gt;Beautiful typographic defaults for HTML you don&amp;rsquo;t control.&lt;/p&gt;&#xA;&lt;p&gt;The official Tailwind CSS Typography plugin provides a set of prose classes you can use to add beautiful typographic defaults to any vanilla HTML you don’t control, like HTML rendered from Markdown, or pulled from a CMS.&lt;/p&gt;&#xA;&lt;p&gt;Tailwind CSS IntelliSense extension for Visual Studio Code&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;article class=&amp;#34;prose lg:prose-xl&amp;#34;&amp;gt;&#xD;&#xA;  {{ markdown }}&#xD;&#xA;&amp;lt;/article&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To see what it looks like in action, check out our &lt;a href=&#34;https://play.tailwindcss.com/uj1vGACRJA?layout=preview&#34;&gt;live demo&lt;/a&gt; on Tailwind Play.&#xA;​&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arabic post test</title>
+      <link>http://localhost:1313/posts/arabic/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/posts/arabic/</guid>
+      <description>&lt;p&gt;مرحبا بكم في مدونتي&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My 1st post</title>
+      <link>http://localhost:1313/posts/the-post/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-post/</guid>
+      <description>&lt;p&gt;Hi there&lt;/p&gt;&#xA;&lt;h1 id=&#34;big-header&#34;&gt;big header&lt;/h1&gt;&#xA;&lt;p&gt;hi&lt;/p&gt;&#xA;&lt;h2 id=&#34;smaller-header&#34;&gt;smaller header&lt;/h2&gt;&#xA;&lt;p&gt;what&lt;/p&gt;&#xA;&lt;h2 id=&#34;smaller-header2&#34;&gt;smaller header2&lt;/h2&gt;&#xA;&lt;p&gt;are&lt;/p&gt;&#xA;&lt;h3 id=&#34;small-header&#34;&gt;small header&lt;/h3&gt;&#xA;&lt;p&gt;you&lt;/p&gt;&#xA;&lt;h1 id=&#34;big-header2&#34;&gt;big header2&lt;/h1&gt;&#xA;&lt;p&gt;seeing&lt;/p&gt;&#xA;&lt;h2 id=&#34;smaller-header3&#34;&gt;smaller header3&lt;/h2&gt;&#xA;&lt;p&gt;in&lt;/p&gt;&#xA;&lt;h2 id=&#34;smaller-header3-1&#34;&gt;smaller header3&lt;/h2&gt;&#xA;&lt;p&gt;here&lt;/p&gt;&#xA;&lt;h3 id=&#34;small-header2&#34;&gt;small header2&lt;/h3&gt;&#xA;&lt;p&gt;mate&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Archive</title>
+      <link>http://localhost:1313/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/archives/</guid>
+      <description>archives</description>
+    </item>
+    <item>
+      <title>Search</title>
+      <link>http://localhost:1313/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/search/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
