@@ -482,22 +482,25 @@
             <!-- Project 0 -->
             <article class="project-card" onclick="openModal(0)">
                 <div class="project-media">
-                    <img src="https://ahmedelnour.com/images/blog_cover.jpg" alt="The Lost E's of I">
+                    <img src="http://localhost:8080/images/media/FirstAid-Image.webp" alt="First Aid Demo">
+                    <!--
+                    <img src="https://ahmedelnour.com/images/media/FirstAid-Image.webp" alt="First Aid Demo">
+                    -->
                 </div>
                 <div class="project-content">
                     <div class="project-header">
-                        <h3 class="project-title">The Lost E's of I</h3>
+                        <h3 class="project-title">First Aid AR</h3>
                         <div class="project-links">
                             <span><i class="fas fa-expand-alt"></i></span>
                         </div>
                     </div>
                     <p class="project-desc">
-                        Implemented a decoupled gameplay framework handling room-based traversal and state management. Engineered a custom dialogue and event system.
+                        Developed an interactive AR training solution. Solved challenges in stable spatial tracking and plane detection to ensure a smooth user experience.
                     </p>
                     <div class="tech-stack">
                         <span>Unity</span>
-                        <span>C#</span>
-                        <span>Dialogue Systems</span>
+                        <span>AR Foundation</span>
+                        <span>Mobile Optimization</span>
                     </div>
                 </div>
             </article>
@@ -505,7 +508,10 @@
             <!-- Project 1 -->
             <article class="project-card" onclick="openModal(1)">
                 <div class="project-media">
-                    <span>[Gameplay GIF Here]</span>
+                    <img src="http://localhost:8080/images/media/Dominoes-image.webp" alt="Dominoes">
+                    <!--
+                    <img src="https://ahmedelnour.com/images/media/Dominoes-image.webp" alt="Dominoes">
+                    -->
                 </div>
                 <div class="project-content">
                     <div class="project-header">
@@ -528,22 +534,22 @@
             <!-- Project 2 -->
             <article class="project-card" onclick="openModal(2)">
                 <div class="project-media">
-                    <span>[AR Demo GIF Here]</span>
+                    <img src="https://ahmedelnour.com/images/blog_cover.jpg" alt="The Lost E's of I">
                 </div>
                 <div class="project-content">
                     <div class="project-header">
-                        <h3 class="project-title">First Aid AR</h3>
+                        <h3 class="project-title">The Lost E's of I</h3>
                         <div class="project-links">
                             <span><i class="fas fa-expand-alt"></i></span>
                         </div>
                     </div>
                     <p class="project-desc">
-                        Developed an interactive AR training solution. Solved challenges in stable spatial tracking and plane detection to ensure a smooth user experience.
+                        Implemented a decoupled gameplay framework handling room-based traversal and state management. Engineered a custom dialogue and event system.
                     </p>
                     <div class="tech-stack">
                         <span>Unity</span>
-                        <span>AR Foundation</span>
-                        <span>Mobile Opt.</span>
+                        <span>C#</span>
+                        <span>Dialogue Systems</span>
                     </div>
                 </div>
             </article>
@@ -551,7 +557,10 @@
             <!-- Project 3 -->
             <article class="project-card" onclick="openModal(3)">
                 <div class="project-media">
-                    <span>[Prototype GIF Here]</span>
+                    <img src="http://localhost:8080/images/media/blockBuilding-image.webp" alt="Block Building System">
+                    <!--
+                    <img src="https://ahmedelnour.com/images/media/blockBuilding-image.webp" alt="Block Building System">
+                    -->
                 </div>
                 <div class="project-content">
                     <div class="project-header">
@@ -671,6 +680,57 @@
         const projects = [
             {
                 id: 0,
+                title: "First Aid AR",
+                media: [
+                    { 
+                        type: 'image', 
+                        src: 'https://ahmedelnour.com/images/media/FirstAid-Image.webp',
+                        thumb: 'https://ahmedelnour.com/images/media/FirstAid-Image.webp' 
+                    }
+                ],
+                desc: `
+                    <p><strong>The Challenge:</strong> Detect flat surfaces and overlay instructional 3D animations accurately on mid-range Android devices.</p>
+                    <br>
+                    <p><strong>My Solution:</strong> Leveraged AR Foundation and optimized 3D assets to maintain performance.</p>
+                     <ul style="margin-top:10px; padding-left:20px; list-style:disc; color:var(--text-muted);">
+                        <li>Implemented plane detection for floor/table anchoring.</li>
+                        <li>Created a step-by-step interactive tutorial system.</li>
+                        <li>Wrote native bridges to access Android-specific camera features.</li>
+                    </ul>`,
+                tags: ["Unity", "AR Foundation", "Mobile Optimization", "Android Native"],
+                repo: "https://github.com/ahmedelnour123",
+                live: "#"
+            },
+            {
+                id: 1,
+                title: "Dominoes Online",
+                media: [
+                    { 
+                        type: 'image', 
+                        src: 'https://ahmedelnour.com/images/media/Dominoes-image.webp', 
+                        thumb: 'https://ahmedelnour.com/images/media/Dominoes-image.webp' 
+                    },
+                    { 
+                        type: 'image', 
+                        src: 'https://ahmedelnour.com/images/media/Dominoes-image.webp', 
+                        thumb: 'https://ahmedelnour.com/images/media/Dominoes-image.webp' 
+                    }
+                ],
+                desc: `
+                    <p><strong>The Challenge:</strong> Synchronize game state perfectly between 4 players in real-time over unreliable mobile networks.</p>
+                    <br>
+                    <p><strong>My Solution:</strong> I utilized Photon Unity Networking (PUN2) to create a robust authoritative server model.</p>
+                     <ul style="margin-top:10px; padding-left:20px; list-style:disc; color:var(--text-muted);">
+                        <li>Implemented room matchmaking and lobby systems.</li>
+                        <li>Handled edge-cases like player disconnection and reconnection.</li>
+                        <li>Compressed network packets to reduce bandwidth usage.</li>
+                    </ul>`,
+                tags: ["Unity", "Photon PUN2", "Multiplayer", "Network Sync"],
+                repo: "https://github.com/ahmedelnour123",
+                live: "#"
+            },
+            {
+                id: 2,
                 title: "The Lost E's of I",
                 media: [
                     { 
@@ -694,71 +754,20 @@
                     <ul style="margin-top:10px; padding-left:20px; list-style:disc; color:var(--text-muted);">
                         <li>Implemented a room-based traversal system similar to Undertale.</li>
                         <li>Built a custom dialogue parser for handling interaction events.</li>
-                        <li>Optimized asset loading for WebGL performance.</li>
+                        <li>Optimized asset loading for mobile performance.</li>
                     </ul>`,
-                tags: ["Unity", "C#", "Event Systems", "WebGL"],
-                repo: "https://github.com/ahmedelnour123",
-                live: "#"
-            },
-            {
-                id: 1,
-                title: "Dominoes Online",
-                media: [
-                    { 
-                        type: 'image', 
-                        src: 'https://via.placeholder.com/800x450/151b2b/64ffda?text=Dominoes+Menu', 
-                        thumb: 'https://via.placeholder.com/100x60/151b2b/64ffda?text=Menu' 
-                    },
-                    { 
-                        type: 'image', 
-                        src: 'https://via.placeholder.com/800x450/111/fff?text=Gameplay+Shot', 
-                        thumb: 'https://via.placeholder.com/100x60/111/fff?text=Game' 
-                    }
-                ],
-                desc: `
-                    <p><strong>The Challenge:</strong> Synchronize game state perfectly between 4 players in real-time over unreliable mobile networks.</p>
-                    <br>
-                    <p><strong>My Solution:</strong> I utilized Photon Unity Networking (PUN2) to create a robust authoritative server model.</p>
-                     <ul style="margin-top:10px; padding-left:20px; list-style:disc; color:var(--text-muted);">
-                        <li>Implemented room matchmaking and lobby systems.</li>
-                        <li>Handled edge-cases like player disconnection and reconnection.</li>
-                        <li>Compressed network packets to reduce bandwidth usage.</li>
-                    </ul>`,
-                tags: ["Unity", "Photon PUN2", "Multiplayer", "Network Sync"],
-                repo: "https://github.com/ahmedelnour123",
-                live: "#"
-            },
-            {
-                id: 2,
-                title: "First Aid AR",
-                media: [
-                    { 
-                        type: 'image', 
-                        src: 'https://via.placeholder.com/800x450/151b2b/64ffda?text=AR+Foundation+Demo', 
-                        thumb: 'https://via.placeholder.com/100x60/151b2b/64ffda?text=AR' 
-                    }
-                ],
-                desc: `
-                    <p><strong>The Challenge:</strong> Detect flat surfaces and overlay instructional 3D animations accurately on mid-range Android devices.</p>
-                    <br>
-                    <p><strong>My Solution:</strong> Leveraged AR Foundation and optimized 3D assets to maintain 60FPS.</p>
-                     <ul style="margin-top:10px; padding-left:20px; list-style:disc; color:var(--text-muted);">
-                        <li>Implemented plane detection for floor/table anchoring.</li>
-                        <li>Created a step-by-step interactive tutorial system.</li>
-                        <li>Wrote native bridges to access Android-specific camera features.</li>
-                    </ul>`,
-                tags: ["Unity", "AR Foundation", "Mobile Opt", "Android Native"],
+                tags: ["Unity", "C#", "Event Systems", "Mobile"],
                 repo: "https://github.com/ahmedelnour123",
                 live: "#"
             },
             {
                 id: 3,
-                title: "Block Building Proto",
+                title: "Block Building Prototype",
                 media: [
                     { 
                         type: 'image', 
-                        src: 'https://via.placeholder.com/800x450/151b2b/64ffda?text=Godot+Prototype+Demo', 
-                        thumb: 'https://via.placeholder.com/100x60/151b2b/64ffda?text=Proto' 
+                        src: 'https://ahmedelnour.com/images/media/blockBuilding-image.webp', 
+                        thumb: 'https://ahmedelnour.com/images/media/blockBuilding-image.webp' 
                     }
                 ],
                 desc: `
