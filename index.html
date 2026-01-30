@@ -682,11 +682,6 @@
                 id: 0,
                 title: "First Aid AR",
                 media: [
-                    { 
-                        type: 'image', 
-                        src: 'https://ahmedelnour.com/images/media/FirstAid-Image-landscape.webp',
-                        thumb: 'https://ahmedelnour.com/images/media/FirstAid-Image-landscape.webp' 
-                    },
                     {
                         type: 'youtube',
                         id: '_KGBOCfLq_s'
@@ -694,6 +689,11 @@
                     {
                         type: 'youtube',
                         id: 'ZKruQw0yraY'
+                    },
+                    { 
+                        type: 'image', 
+                        src: 'https://ahmedelnour.com/images/media/FirstAid-Image-landscape.webp',
+                        thumb: 'https://ahmedelnour.com/images/media/FirstAid-Image-landscape.webp' 
                     }
                 ],
                 desc: `
@@ -714,13 +714,13 @@
                 title: "Dominoes Online",
                 media: [
                     { 
+                        type: 'youtube', 
+                        id: 'oJVGqJ_lHQM', 
+                    },
+                    { 
                         type: 'image', 
                         src: 'https://ahmedelnour.com/images/media/Dominoes-image.webp', 
                         thumb: 'https://ahmedelnour.com/images/media/Dominoes-image.webp' 
-                    },
-                    { 
-                        type: 'youtube', 
-                        id: 'oJVGqJ_lHQM', 
                     }
                 ],
                 desc: `
@@ -741,17 +741,17 @@
                 title: "The Lost E's of I",
                 media: [
                     { 
-                        type: 'image', 
-                        src: 'https://ahmedelnour.com/images/blog_cover.jpg', 
-                        thumb: 'https://ahmedelnour.com/images/blog_cover.jpg' 
-                    },
-                    { 
                         type: 'youtube', 
                         id: 'Xr032EhUDPw'
                     },
                     { 
                         type: 'youtube', 
                         id: 'njos57IJf-0'
+                    },
+                    { 
+                        type: 'image', 
+                        src: 'https://ahmedelnour.com/images/blog_cover.jpg', 
+                        thumb: 'https://ahmedelnour.com/images/blog_cover.jpg' 
                     }
                 ],
                 desc: `
@@ -772,13 +772,13 @@
                 title: "Block Building Prototype",
                 media: [
                     { 
+                        type: 'youtube', 
+                        id: 'fGQGi7JlRjQ', 
+                    },
+                    { 
                         type: 'image', 
                         src: 'https://ahmedelnour.com/images/media/blockBuilding-image.webp', 
                         thumb: 'https://ahmedelnour.com/images/media/blockBuilding-image.webp' 
-                    },
-                    { 
-                        type: 'youtube', 
-                        id: 'fGQGi7JlRjQ', 
                     }
                 ],
                 desc: `
@@ -870,7 +870,7 @@
             } 
             else if (item.type === 'youtube') {
                 // AUTO-GENERATE EMBED URL
-                const embedUrl = `https://www.youtube-nocookie.com/embed/${item.id}`;
+                const embedUrl = `https://www.youtube-nocookie.com/embed/${item.id}?autoplay=1&mute=0&rel=0&controls=1&iv_load_policy=3&modestbranding=1`;
                 html = `<iframe src="${embedUrl}" frameborder="0" allowfullscreen style="width:100%; height:100%; display:block;"></iframe>`;
             }
             mHero.innerHTML = html;
