@@ -534,7 +534,7 @@
             <!-- Project 2 -->
             <article class="project-card" onclick="openModal(2)">
                 <div class="project-media">
-                    <img src="https://ahmedelnour.com/images/blog_cover.jpg" alt="The Lost E's of I">
+                    <img src="https://ahmedelnour.com/images/media/TheLostEsOfI-image.webp" alt="The Lost E's of I">
                 </div>
                 <div class="project-content">
                     <div class="project-header">
@@ -659,8 +659,8 @@
                     <div class="modal-header">
                         <h2 id="m-title" class="modal-title">Project Title</h2>
                         <div class="modal-links">
-                            <a id="m-repo" href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
                             <a id="m-live" href="#" target="_blank"><i class="fas fa-play"></i> Play</a>
+                            <a id="m-repo" href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
 
@@ -680,6 +680,8 @@
         const projects = [
             {
                 id: 0,
+                hideCode: true,
+                hidePlay: true,
                 title: "First Aid AR",
                 media: [
                     {
@@ -732,9 +734,10 @@
                         <li>Handled edge-cases like player disconnection and reconnection.</li>
                         <li>Compressed network packets to reduce bandwidth usage.</li>
                     </ul>`,
-                tags: ["Unity", "Photon PUN2", "Multiplayer", "Network Sync"],
+                tags: ["Unity", "Photon PUN2", "Multiplayer", "Networking"],
+                hideCode: true,
                 repo: "https://github.com/ahmedelnour123",
-                live: "#"
+                live: "https://play.google.com/store/apps/details?id=com.YazeedSabilDesigns.Domanah"
             },
             {
                 id: 2,
@@ -742,16 +745,23 @@
                 media: [
                     { 
                         type: 'youtube', 
-                        id: 'Xr032EhUDPw'
+                        id: 'UdJWK6QS1J8',
+                        note: 'color'
                     },
                     { 
                         type: 'youtube', 
-                        id: 'njos57IJf-0'
+                        id: 'W5nfOv-QT-4',
+                        note: 'dialog'
+                    },
+                    { 
+                        type: 'youtube', 
+                        id: 'azOWATde4ok',
+                        note: 'gears'
                     },
                     { 
                         type: 'image', 
-                        src: 'https://ahmedelnour.com/images/blog_cover.jpg', 
-                        thumb: 'https://ahmedelnour.com/images/blog_cover.jpg' 
+                        src: 'https://ahmedelnour.com/images/media/TheLostEsOfI-image.webp', 
+                        thumb: 'https://ahmedelnour.com/images/media/TheLostEsOfI-image.webp' 
                     }
                 ],
                 desc: `
@@ -764,7 +774,7 @@
                         <li>Optimized asset loading for mobile performance.</li>
                     </ul>`,
                 tags: ["Unity", "C#", "Event Systems", "Mobile"],
-                repo: "https://github.com/ahmedelnour123",
+                repo: "https://github.com/void018/The-Lost-Es-Of-I",
                 live: "#"
             },
             {
@@ -791,6 +801,8 @@
                         <li>Designed a flexible UI for selecting building types.</li>
                     </ul>`,
                 tags: ["Godot", "GDScript", "Grid Logic", "Prototyping"],
+                hideCode: true,
+                hidePlay: true,
                 repo: "https://github.com/ahmedelnour123",
                 live: "#"
             }
@@ -815,9 +827,12 @@
             // Fill Text Data
             mTitle.innerText = currentProject.title;
             mDesc.innerHTML = currentProject.desc;
+            mTags.innerHTML = currentProject.tags.map(tag => `<span class="modal-tag">${tag}</span>`).join('');
             mRepo.href = currentProject.repo;
             mLive.href = currentProject.live;
-            mTags.innerHTML = currentProject.tags.map(tag => `<span class="modal-tag">${tag}</span>`).join('');
+
+            mRepo.style.visibility = currentProject.hideCode === true? "hidden" : "visible";
+            mLive.style.visibility = currentProject.hidePlay === true? "hidden" : "visible";
 
             // Generate Thumbnails
             if(currentProject.media && currentProject.media.length > 0) {
