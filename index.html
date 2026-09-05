@@ -511,6 +511,28 @@
             <!-- Project 1 -->
             <article class="project-card" onclick="openModal(1)">
                 <div class="project-media">
+                    <img src="https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image.webp" alt="Sky Hopper">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Sky Hopper</h3>
+                        <div class="project-links">
+                            <span><i class="fas fa-expand-alt"></i></span>
+                        </div>
+                    </div>
+                    <p class="project-desc">
+                        A 3D puzzle platformer where crumbling tiles and swipe-based movement force fast decision-making across 12 hand-crafted levels.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Unity</span>
+                        <span>C#</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card" onclick="openModal(2)">
+                <div class="project-media">
                     <!--
                     <img src="http://localhost:8080/images/media/Dominoes-image.webp" alt="Dominoes">
                     -->
@@ -534,8 +556,8 @@
                 </div>
             </article>
 
-            <!-- Project 2 -->
-            <article class="project-card" onclick="openModal(2)">
+            <!-- Project 3 -->
+            <article class="project-card" onclick="openModal(3)">
                 <div class="project-media">
                     <img src="https://ahmedelnour.com/images/media/TheLostEsOfI-image.webp" alt="The Lost E's of I">
                 </div>
@@ -557,8 +579,8 @@
                 </div>
             </article>
 
-            <!-- Project 3 -->
-            <article class="project-card" onclick="openModal(3)">
+            <!-- Project 4 -->
+            <article class="project-card" onclick="openModal(4)">
                 <div class="project-media">
                     <!--
                     <img src="http://localhost:8080/images/media/blockBuilding-image.webp" alt="Block Building System">
@@ -717,6 +739,63 @@
             },
             {
                 id: 1,
+                title: "Sky Hopper",
+                media: [
+                    {
+                        type: 'youtube',
+                        id: 'mPxcl66_o-0'
+                    },
+                    {
+                        type: 'image',
+                        src: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image.webp',
+                        thumb: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image.webp'
+                    },
+                    {
+                        type: 'image',
+                        src: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-01.webp',
+                        thumb: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-01.webp'
+                    },
+                    {
+                        type: 'image',
+                        src: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-02.webp',
+                        thumb: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-02.webp'
+                    },
+                    {
+                        type: 'image',
+                        src: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-03.webp',
+                        thumb: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-03.webp'
+                    },
+                    {
+                        type: 'image',
+                        src: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-04.webp',
+                        thumb: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-04.webp'
+                    },
+                    {
+                        type: 'image',
+                        src: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-05.webp',
+                        thumb: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-05.webp'
+                    },
+                    {
+                        type: 'image',
+                        src: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-06.webp',
+                        thumb: 'https://ahmedelnour.com/images/media/sky_hopper/SkyHopper-Image-06.webp'
+                    }
+                ],
+                desc: `
+                    <p><strong>The Challenge:</strong> Design a bite-sized 3D platformer with enough tension to keep players hooked, where hesitation is punished but the controls stay approachable.</p>
+                    <br>
+                    <p><strong>My Solution:</strong> a simple complete and shipped the full game in Unity, building a swipe-based hop mechanic paired with tiles that crumble moments after contact, forcing constant forward momentum.</p>
+                     <ul style="margin-top:10px; padding-left:20px; list-style:disc; color:var(--text-muted);">
+                        <li>Hand-crafted 12 levels ranging from simple paths to intricate sky-bound mazes.</li>
+                        <li>Built a beat-the-clock scoring system awarding up to 3 stars per level.</li>
+                        <li>Implemented spring tiles for shortcut-based traversal and collectibles to reward exploration.</li>
+                    </ul>`,
+                tags: ["Unity", "C#", "Mobile", "Puzzle"],
+                repo: "https://github.com/ahmedelnour123/sky-hopper",
+                live: "https://play.google.com/store/apps/details?id=com.ahmedelnour.SkyHopper"
+            },
+            {
+                id: 2,
                 title: "Dominoes Online",
                 media: [
                     { 
@@ -744,7 +823,7 @@
                 live: "https://play.google.com/store/apps/details?id=com.YazeedSabilDesigns.Domanah"
             },
             {
-                id: 2,
+                id: 3,
                 title: "The Lost E's of I",
                 media: [
                     { 
@@ -784,7 +863,7 @@
                 live: "#"
             },
             {
-                id: 3,
+                id: 4,
                 title: "Block Building Prototype",
                 media: [
                     { 
