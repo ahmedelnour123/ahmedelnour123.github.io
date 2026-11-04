@@ -1,6 +1,6 @@
 {
-  "name": "Ahmed Alnour",
-  "short_name": "Alnour",
+  "name": "Ahmed Elnour",
+  "short_name": "Ahmed Elnour",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#0c0d10",
+  "background_color": "#0c0d10",
   "display": "standalone"
 }
