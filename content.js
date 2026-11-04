@@ -39,6 +39,22 @@ window.SITE = {
 
   projects: [
     {
+      slug: "ar-first-aid",
+      title: "AR First Aid",
+      tracks: ["interactive"],
+      summary: "An interactive AR training app that anchors step-by-step first aid animations to real floors and tables.",
+      tags: ["Unity", "AR Foundation", "Mobile Optimization", "Android Native"],
+      links: {},
+      media: ["yt:U9nPXQsWejM", "yt:ZKruQw0yraY", "cover.webp"],
+      challenge: "Detect flat surfaces and overlay instructional 3D animations accurately on mid-range Android devices.",
+      solution: "Used AR Foundation with optimized 3D assets to keep performance steady.",
+      highlights: [
+        "Plane detection for floor and table anchoring.",
+        "A step-by-step interactive tutorial system.",
+        "Native bridges to Android-specific camera features.",
+      ],
+    },
+    {
       slug: "ar-cheese-hunt",
       title: "AR Cheese Hunt",
       tracks: ["interactive", "game"],
@@ -55,22 +71,6 @@ window.SITE = {
         "Collision-based pickups and a configurable spawn system that keeps cheese topped up as new planes are scanned mid-session.",
         "A timed 60-second scoring loop; restarting re-randomizes every spawn position.",
         "Replaced a world-space arrow with a screen-space pointer after playtesters kept losing the character off-camera.",
-      ],
-    },
-    {
-      slug: "ar-first-aid",
-      title: "AR First Aid",
-      tracks: ["interactive"],
-      summary: "An interactive AR training app that anchors step-by-step first aid animations to real floors and tables.",
-      tags: ["Unity", "AR Foundation", "Mobile Optimization", "Android Native"],
-      links: {},
-      media: ["yt:U9nPXQsWejM", "yt:ZKruQw0yraY", "cover.webp"],
-      challenge: "Detect flat surfaces and overlay instructional 3D animations accurately on mid-range Android devices.",
-      solution: "Used AR Foundation with optimized 3D assets to keep performance steady.",
-      highlights: [
-        "Plane detection for floor and table anchoring.",
-        "A step-by-step interactive tutorial system.",
-        "Native bridges to Android-specific camera features.",
       ],
     },
     {
