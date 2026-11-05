@@ -1,0 +1,116 @@
+/* ============================================================
+   Theme: Bakhoor smoke (smoke.html)
+   Deep burgundy night, gold text, soft rising smoke, mabkhara.
+   ============================================================ */
+
+:root {
+  --page-bg: #12060A;
+  --page-img: radial-gradient(ellipse at 50% 0%, #4A1A22 0%, #1E0A0E 60%, #12060A 100%);
+  --paper-bg: #1D0A0E;
+  --paper-img: var(--lattice), linear-gradient(180deg, #2A0F14 0%, #1C0A0D 45%, #241014 100%);
+  --text: #EFE2CE;
+  --text-soft: #C9B59D;
+  --title: var(--gold-soft);
+  --accent: #CFA557;
+  --card-bg: rgba(255,240,220,.045);
+  --card-line: rgba(217,190,134,.28);
+  --btn-bg: var(--gold-soft);
+  --btn-text: #2A0F14;
+  --btn-hover: #E8CF9A;
+  --ghost-text: var(--gold-soft);
+  --ghost-hover: rgba(217,190,134,.1);
+  --shadow: rgba(0,0,0,.6);
+}
+
+.couple__name,
+.closing__big,
+.verse__text { text-shadow: 0 0 22px rgba(217,190,134,.32); }
+
+.hero {
+  padding-top: 56px;
+  background: radial-gradient(ellipse at 50% 85%, rgba(122,31,43,.55) 0%, transparent 65%);
+}
+
+/* ---------- Mabkhara with rising smoke ---------- */
+.censer {
+  position: relative;
+  width: 64px;
+  margin: 30px auto 0;
+}
+.censer svg { display: block; width: 100%; height: auto; overflow: visible; }
+.censer .ember { filter: drop-shadow(0 0 8px #FF8A3D); animation: flicker 1.6s ease-in-out infinite alternate; }
+.wisp {
+  position: absolute;
+  left: 50%;
+  bottom: 44px;
+  z-index: -1;
+  width: 90px;
+  height: 90px;
+  margin-left: -45px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,236,220,.22) 0%, rgba(255,236,220,.08) 45%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  animation: wisp var(--dur) ease-out var(--delay) infinite;
+}
+@keyframes wisp {
+  0%   { opacity: 0; transform: translate(0, 0) scale(.4); }
+  20%  { opacity: .8; }
+  100% { opacity: 0; transform: translate(var(--dx), -340px) scale(2.6); }
+}
+@keyframes flicker { from { opacity: .75; } to { opacity: 1; } }
+
+/* ---------- Components on dark ---------- */
+.cd { box-shadow: inset 0 0 18px rgba(217,190,134,.06); }
+.card,
+.note { box-shadow: 0 14px 30px -18px var(--shadow), inset 0 1px 0 rgba(255,240,220,.06); }
+.note { padding-top: 26px; }
+
+/* ============================================================
+   Opening: bakhoor smoke
+   ============================================================ */
+.smk {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 85%, #5A1E26 0%, #2A0F14 60%, #160709 100%);
+}
+.smk-text {
+  position: absolute; top: 20vh; left: 0; right: 0;
+  display: grid; gap: calc(var(--u) * 1);
+  padding: 0 16px;
+  animation: smkIn 3s ease .3s both;
+}
+.smk-text small { font-size: calc(var(--u) * 4.4); color: var(--sand); }
+.smk-text b { font-family: var(--font-script); font-size: calc(var(--u) * 13); color: var(--gold-soft); line-height: 1.35; text-shadow: 0 0 calc(var(--u) * 5) rgba(217,190,134,.35); }
+.smk-text i { font-style: normal; font-family: var(--font-body); font-size: calc(var(--u) * 5.5); color: var(--gold); }
+@keyframes smkIn { from { opacity: 0; filter: blur(6px); } to { opacity: 1; filter: none; } }
+
+.puff {
+  position: absolute; left: 50%;
+  bottom: calc(12vh + var(--u) * 24);
+  width: calc(var(--u) * 26); height: calc(var(--u) * 26);
+  margin-left: calc(var(--u) * -13);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,236,220,.32) 0%, rgba(255,236,220,.12) 40%, transparent 70%);
+  opacity: 0;
+  animation: rise var(--dur) ease-out var(--delay) infinite;
+}
+@keyframes rise {
+  0%   { opacity: 0; transform: translate(0, 0) scale(.35); }
+  15%  { opacity: .9; }
+  100% { opacity: 0; transform: translate(calc(var(--dx) * var(--u)), -62vh) scale(2.8); }
+}
+
+.mabkhara { position: absolute; left: 50%; bottom: 12vh; width: calc(var(--u) * 30); transform: translateX(-50%); }
+.mabkhara svg { display: block; width: 100%; height: auto; overflow: visible; }
+.mabkhara .ember { filter: drop-shadow(0 0 calc(var(--u) * 2) #FF8A3D); animation: flicker 1.6s ease-in-out infinite alternate; }
+
+/* the smoke fills the screen, then clears into the dark page */
+.smk-fog {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 65%, rgba(236,222,206,.94) 0%, rgba(160,128,118,.92) 45%, rgba(42,18,24,.97) 100%);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.intro.is-playing .smk-fog { opacity: 1; }
+.smk .intro__hint { bottom: 4.5vh; }

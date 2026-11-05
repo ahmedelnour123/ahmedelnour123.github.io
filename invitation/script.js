@@ -1,6 +1,7 @@
 /* ============================================================
    Wedding invitation — behaviour
-   Fills the page from config.js, runs the intro (?intro=2|4), countdown,
+   Shared by curtain.html and smoke.html. Fills the page from config.js,
+   runs the page's opening (#intro, length in data-duration), countdown,
    calendar buttons and scroll reveal. No libraries.
    ============================================================ */
 (function () {
@@ -49,16 +50,42 @@
   }
 
   /* ---------- fill content ---------- */
+  var groomShort = W.groom.shortName || W.groom.name;
+  var brideShort = W.bride.shortName || W.bride.name;
+
   setField("groomTitle", W.groom.title || "");
-  setField("groomName", W.groom.name);
+  setField("groomName", groomShort);
+  setField("groomFullName", W.groom.name);
   setField("brideTitle", W.bride.title || "");
-  setField("brideName", W.bride.name);
+  setField("brideName", brideShort);
+  setField("brideFullName", W.bride.name);
 
   setField("verse", W.verse);
   setField("verseRef", W.verseRef);
   setList("intro", W.intro, "p");
-  setList("families", W.families, "li");
   setField("invitationLine", W.invitationLine);
+
+  // families: [{ father, mother }, ...] — plain strings are also accepted
+  document.querySelectorAll('[data-field="families"]').forEach(function (list) {
+    list.textContent = "";
+    (W.families || []).forEach(function (fam) {
+      var li = document.createElement("li");
+      li.className = "hosts__family";
+      if (typeof fam === "string") {
+        li.textContent = fam;
+      } else {
+        [["hosts__father", fam.father], ["hosts__and", fam.father && fam.mother ? "و" : ""], ["hosts__mother", fam.mother]]
+          .forEach(function (part) {
+            if (!part[1]) return;
+            var span = document.createElement("span");
+            span.className = part[0];
+            span.textContent = part[1];
+            li.appendChild(span);
+          });
+      }
+      list.appendChild(li);
+    });
+  });
 
   setField("venueName", W.venue.name);
   setField("venueDescription", W.venue.description || "");
@@ -74,7 +101,7 @@
   setField("closing", W.closing);
   setField("closingSub", W.closingSub);
 
-  document.title = "دعوة زفاف " + W.groom.name + " و" + W.bride.name;
+  document.title = "دعوة زفاف " + groomShort + " و" + brideShort;
 
   /* ---------- dates (Gregorian + Hijri, Saudi time) ---------- */
   if (validDate) {
@@ -102,7 +129,7 @@
   if (W.venue.mapUrl) mapBtn.href = W.venue.mapUrl; else mapBtn.hidden = true;
 
   /* ---------- calendar ---------- */
-  var eventTitle = "حفل زفاف " + W.groom.name + " و" + W.bride.name;
+  var eventTitle = "حفل زفاف " + groomShort + " و" + brideShort;
   var location = [W.venue.name, W.venue.address, W.venue.city].filter(Boolean).join("، ");
 
   function utcStamp(d) {
@@ -199,27 +226,16 @@
     document.querySelector(".countdown").hidden = true;
   }
 
-  /* ---------- intro: ?intro=2 (curtain, default) or ?intro=4 (smoke) ---------- */
-  var INTROS = {
-    "2": { name: "curtain", duration: 2400 },   // curtain gathers, then fades
-    "4": { name: "smoke",   duration: 1400 }    // smoke fills the screen, then clears
-  };
-  var requested = new URLSearchParams(window.location.search).get("intro");
-  var introId = INTROS.hasOwnProperty(requested) ? requested : "2";
-
+  /* ---------- opening (each page has its own #intro) ---------- */
   var intro = document.getElementById("intro");
-  intro.querySelectorAll("[data-intro]").forEach(function (el) {
-    if (el.getAttribute("data-intro") === introId) el.hidden = false;
-    else el.remove();
-  });
-  intro.setAttribute("data-active", INTROS[introId].name);
-
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var opened = false;
 
   function openInvite() {
     if (opened) return;
     opened = true;
+    if (!intro) { document.body.classList.remove("is-locked"); startReveal(); return; }
+    var duration = parseInt(intro.getAttribute("data-duration"), 10) || 2000;
     intro.classList.add("is-playing");
     setTimeout(function () {
       intro.classList.add("is-gone");
@@ -227,12 +243,16 @@
       document.body.classList.remove("is-locked");
       window.scrollTo(0, 0);
       startReveal();
-    }, reduced ? 200 : INTROS[introId].duration);
+    }, reduced ? 200 : duration);
   }
-  intro.addEventListener("click", openInvite);
-  intro.addEventListener("keydown", function (e) {
-    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openInvite(); }
-  });
+  if (intro) {
+    intro.addEventListener("click", openInvite);
+    intro.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openInvite(); }
+    });
+  } else {
+    openInvite();
+  }
 
   /* ---------- scroll reveal ---------- */
   function startReveal() {

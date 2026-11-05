@@ -6,20 +6,29 @@
 
 window.WEDDING = {
   /* ---------- العروسان | The couple ---------- */
+  // shortName = the big name on the opening and hero; name = full name under it.
+  // title = e.g. "م." or "د." shown above the name — leave "" for none.
   groom: {
-    title: "[لقب العريس]",        // e.g. "م." or "د." — leave "" for none
-    name: "[اسم العريس]"
+    title: "",
+    shortName: "خضر",
+    name: "خضر صديق خضر علي"
   },
   bride: {
-    title: "[لقب العروس]",
-    name: "[اسم العروس]"
+    title: "",
+    shortName: "أمل",
+    name: "أمل جمعة حمدالسيد محمد"
   },
 
   /* ---------- الأسر الداعية | Host families ---------- */
-  // One line per family group, as it should appear on the card.
   families: [
-    "[آل والد العريس] و [آل والدة العريس]",
-    "[آل والد العروس] و [آل والدة العروس]"
+    { // أهل العريس
+      father: "صديق خضر علي حمد",
+      mother: "حرم محمد أبوعشي ميدم"
+    },
+    { // أهل العروس
+      father: "جمعة حمدالسيد محمد جماعة",
+      mother: "فطيمة علي محمد جماعة"
+    }
   ],
 
   /* ---------- الموعد | Date & time ---------- */
