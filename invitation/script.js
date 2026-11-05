@@ -1,7 +1,7 @@
 /* ============================================================
    Wedding invitation — behaviour
-   Shared by curtain.html and smoke.html. Fills the page from config.js,
-   runs the page's opening (#intro, length in data-duration), countdown,
+   Fills index.html from config.js, runs the bakhoor smoke opening
+   (#intro, length in data-duration), countdown,
    calendar buttons and scroll reveal. No libraries.
    ============================================================ */
 (function () {
