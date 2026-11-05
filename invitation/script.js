@@ -1,6 +1,6 @@
 /* ============================================================
    Wedding invitation — behaviour
-   Fills the page from config.js, runs the envelope, countdown,
+   Fills the page from config.js, runs the intro (?intro=2|4), countdown,
    calendar buttons and scroll reveal. No libraries.
    ============================================================ */
 (function () {
@@ -51,10 +51,8 @@
   /* ---------- fill content ---------- */
   setField("groomTitle", W.groom.title || "");
   setField("groomName", W.groom.name);
-  setField("groomInitial", W.groom.initial || W.groom.name.charAt(0));
   setField("brideTitle", W.bride.title || "");
   setField("brideName", W.bride.name);
-  setField("brideInitial", W.bride.initial || W.bride.name.charAt(0));
 
   setField("verse", W.verse);
   setField("verseRef", W.verseRef);
@@ -201,24 +199,40 @@
     document.querySelector(".countdown").hidden = true;
   }
 
-  /* ---------- envelope ---------- */
+  /* ---------- intro: ?intro=2 (curtain, default) or ?intro=4 (smoke) ---------- */
+  var INTROS = {
+    "2": { name: "curtain", duration: 2400 },   // curtain gathers, then fades
+    "4": { name: "smoke",   duration: 1400 }    // smoke fills the screen, then clears
+  };
+  var requested = new URLSearchParams(window.location.search).get("intro");
+  var introId = INTROS.hasOwnProperty(requested) ? requested : "2";
+
   var intro = document.getElementById("intro");
-  var openBtn = document.getElementById("openBtn");
+  intro.querySelectorAll("[data-intro]").forEach(function (el) {
+    if (el.getAttribute("data-intro") === introId) el.hidden = false;
+    else el.remove();
+  });
+  intro.setAttribute("data-active", INTROS[introId].name);
+
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var opened = false;
 
   function openInvite() {
     if (opened) return;
     opened = true;
-    intro.classList.add("is-opening");
+    intro.classList.add("is-playing");
     setTimeout(function () {
       intro.classList.add("is-gone");
+      intro.setAttribute("aria-hidden", "true");
       document.body.classList.remove("is-locked");
       window.scrollTo(0, 0);
       startReveal();
-    }, reduced ? 200 : 1750);
+    }, reduced ? 200 : INTROS[introId].duration);
   }
-  openBtn.addEventListener("click", openInvite);
+  intro.addEventListener("click", openInvite);
+  intro.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openInvite(); }
+  });
 
   /* ---------- scroll reveal ---------- */
   function startReveal() {
