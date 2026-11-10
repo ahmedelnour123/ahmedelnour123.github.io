@@ -1,0 +1,777 @@
+{
+  "profile": {
+    "name": "Othman Abdalla",
+    "handle": "Nightfall16",
+    "role": "Unreal Engine Tools & Gameplay Programmer",
+    "experience": "11+",
+    "tagline": "Self-taught C++ programmer building editor tools, plugins and gameplay systems that help Unreal teams move faster.",
+    "avatar": {
+      "src": "Resources/img/nightfall.avif",
+      "w": 512,
+      "h": 512
+    },
+    "socials": [
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "url": "https://www.youtube.com/@arrowsdev"
+      },
+      {
+        "name": "LinkedIn",
+        "icon": "linkedin",
+        "url": "https://www.linkedin.com/in/othman-abdalla-145324232/"
+      },
+      {
+        "name": "ArtStation",
+        "icon": "artstation",
+        "url": "https://nighfall16.artstation.com/"
+      },
+      {
+        "name": "Instagram",
+        "icon": "instagram",
+        "url": "https://www.instagram.com/nightfall_ue/"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "Hi, my name is Othman Abdalla. I am a self-taught C++ programmer and Civil Engineer by education, with <strong>11+ years of experience</strong> building tools and gameplay systems. My passion lies in solving complex technical challenges to create efficient workflows and engaging experiences for players."
+    ],
+    "sections": [
+      {
+        "heading": "My Journey with Unreal Engine",
+        "content": "After exploring various engines like Game Maker and Unity, I discovered Unreal Engine 3 (UDK) and was instantly hooked. I have been specializing in the Unreal ecosystem ever since, focusing on creating powerful editor tools and core game systems that empower creative teams."
+      },
+      {
+        "heading": "Early Career & Web Games",
+        "content": "I began my career developing web-based games for gaming portals for major telecom companies in Sudan, including Sudani (Suda Play), Zain Sudan (Almees), and MTN, where users could play games using their mobile SIM card credits, which gave me a strong foundation in building and maintaining live service products like our current live service game 'RiffXR'."
+      },
+      {
+        "heading": "Nightfall the 3D artist",
+        "content": "At one point in my career I took a deep dive into creating game-ready character models, for my personal projects and as a freelancer on Fiverr for 3 years, until I reached <strong>Level One Seller</strong>."
+      }
+    ]
+  },
+  "editorTools": [
+    {
+      "id": "tool-trashmobs",
+      "title": "TrashMobsTools",
+      "summary": "Unreal editor suite for loot tables, drop analysis and player inventory debugging in a VR MMORPG.",
+      "description": [
+        "A custom Unreal Engine editor extension developed for a VR MMORPG studio in Los Angeles. This tool allows designers and developers to set up loot drops, analyze item distribution, and debug player inventory directly inside Unreal Engine.",
+        "This streamlined workflow eliminated the need for developers to switch between Unreal and external dashboards, significantly speeding up iteration and debugging."
+      ],
+      "featuresHeading": "Key Features",
+      "features": [
+        "<strong>Loot & Drop Management:</strong> Define item drops, probabilities, and boss rewards with a visual interface.",
+        "<strong>Data Integration:</strong> Pulls backend server data into Unreal for real-time analysis.",
+        "<strong>Item & Avatar Tools:</strong> Manage dropped items, avatars, and avatar parts with filtering and probability settings.",
+        "<strong>Photo Studio:</strong> Generate high-quality item thumbnails/icons for consistent in-game UI.",
+        "<strong>Account Analyzer:</strong> Debug player accounts by reviewing loot histories and drop reports."
+      ],
+      "media": [
+        {
+          "type": "image",
+          "src": "Resources/img/trash-mobs-tool1.avif",
+          "alt": "Trash Mobs Tool Screenshot 1",
+          "w": 1226,
+          "h": 910
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/trash-mobs-tool2.avif",
+          "alt": "Trash Mobs Tool Screenshot 2",
+          "w": 1232,
+          "h": 906
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/trash-mobs-tool3.avif",
+          "alt": "Trash Mobs Tool Screenshot 3",
+          "w": 1216,
+          "h": 910
+        }
+      ]
+    },
+    {
+      "id": "tool-riffsdk",
+      "title": "Riff XR Avatar SDK",
+      "summary": "Step-by-step wizard that auto-generates IK Rigs and Retargeters for player-made avatars.",
+      "description": [
+        "An Unreal Engine editor toolkit designed to streamline the user-generated content (UGC) pipeline for the VR RPG game Riff XR. This SDK Assistant guides modders through a multi-step wizard, automating the complex setup of IK Rigs and Retargeters to make custom avatars game-ready.",
+        "By automating the technical rigging process, the SDK significantly lowers the barrier to entry for community creators, allowing them to focus on avatar design rather than complex engine setups."
+      ],
+      "featuresHeading": "Key Features",
+      "features": [
+        "<strong>Guided Setup Wizard:</strong> A step-by-step interface (\"SDK Assistant\") that walks creators through the entire process, from mesh preparation and bone mapping to final asset generation.",
+        "<strong>Automated Rig Generation:</strong> Analyzes the avatar's skeleton and automatically creates the required IKRig and IKRetargeter assets, a process that previously had to be done manually.",
+        "<strong>Intuitive Bone Mapping:</strong> Provides a clear UI for mapping the custom avatar's skeleton to the Riff XR standard, with warnings and hints to help correct common setup issues.",
+        "<strong>Custom VR Animation Nodes:</strong> Includes a dedicated suite of Animation Blueprint nodes like \"RiffXR Hands Pose Generator\" and \"RiffXR Twist Control\" to simplify hand posing and solve common arm twisting issues in VR."
+      ],
+      "media": [
+        {
+          "type": "image",
+          "src": "Resources/img/sdk1.avif",
+          "alt": "Riff XR SDK - Bone Mapping Step",
+          "w": 960,
+          "h": 724
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/sdk2.avif",
+          "alt": "Riff XR SDK - Asset Generation Step",
+          "w": 957,
+          "h": 728
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/sdk4.avif",
+          "alt": "Riff XR SDK - Custom Animation Nodes",
+          "w": 716,
+          "h": 603
+        }
+      ]
+    },
+    {
+      "id": "tool-pluginbuilder",
+      "title": "Unreal Engine Plugins Builder",
+      "summary": "wxWidgets desktop app that wraps Unreal's UAT for one-click plugin packaging.",
+      "description": [
+        "A standalone C++ desktop application built with the wxWidgets framework to streamline the packaging and deployment of Unreal Engine plugins. Epic Games requires all marketplace plugins to be built via the command-line Build Automation Tool (UAT), so I created this application to provide a simple, powerful graphical interface for that process.",
+        "This tool eliminates the tedious and error-prone process of manual command-line builds, ensuring every plugin is packaged correctly for the marketplace and streamlining the release workflow."
+      ],
+      "featuresHeading": "Key Features",
+      "features": [
+        "<strong>Centralized Plugin Management:</strong> Add, track, and manage all your Unreal Engine plugins in one place, complete with version numbers and build history.",
+        "<strong>One-Click UAT Builds:</strong> Package plugins with a single click, directly invoking Unreal's Build Automation Tool without needing to use the command line.",
+        "<strong>Multi-Version Engine Targeting:</strong> Easily select and build your plugins against different versions of Unreal Engine to ensure broad compatibility.",
+        "<strong>Integrated Build Console:</strong> Monitor the entire packaging process in real-time with a built-in console that displays live output from UAT for quick debugging.",
+        "<strong>Custom Build Arguments:</strong> Pass custom command-line arguments to the build process for advanced packaging requirements."
+      ],
+      "media": [
+        {
+          "type": "image",
+          "src": "Resources/img/pluginsbuilder.avif",
+          "alt": "Unreal Engine Plugins Builder Interface",
+          "w": 1264,
+          "h": 709
+        }
+      ]
+    }
+  ],
+  "gameDevTools": [
+    {
+      "id": "tool-goap",
+      "title": "Goap AI System",
+      "summary": "Goal-Oriented Action Planning AI with a visual Brain Inspector debugger.",
+      "description": [
+        "My implementation of a Goal-Oriented Action Planning (GOAP) system for Unreal Engine provides a powerful and flexible framework for creating intelligent AI. This plugin simplifies complex AI behaviors by allowing developers to define a set of simple actions, and the GOAP brain component automatically chains them together to achieve a specific goal. This system also includes a robust editor tool for debugging and visualizing the AI's decision-making process.",
+        "This GOAP tool offers an efficient and scalable solution for building complex AI, allowing developers to focus on creating rich and believable agent behaviors with a minimal amount of effort."
+      ],
+      "featuresHeading": "Key Features",
+      "features": [
+        "<strong>Modular AI Behavior:</strong> Instead of writing complex state machines, developers can create minimal, reusable \"actions\" (e.g., go to a location, play an animation). The GOAP brain component then uses a planner to intelligently chain these actions into a complete plan to achieve a desired goal.",
+        "<strong>Intuitive Setup with Gameplay Tags:</strong> The system uses Unreal's native Gameplay Tags to define goals, world states, and agent facts, ensuring a user-friendly setup and preventing spelling errors. By simply adding more actions to the available array, the AI's behavior becomes more sophisticated without any additional programming.",
+        "<strong>Dynamic Planning and Goal Prioritization:</strong> The GOAP brain dynamically creates a plan based on the current world state and the agent's facts. The system can also be configured to prioritize certain goals over others (e.g., harvesting mature crops before planting new ones), ensuring the AI's behavior is always relevant and efficient.",
+        "<strong>Built-in Debugging Tools:</strong> The plugin includes a comprehensive \"Brain Inspector\" editor tool that allows developers to visualize the AI's thought process. This tool displays the current plan, preconditions, and effects of each action, as well as a history of plans and tool tip over each action node giving failure results that are also customizable in the action class, making it easy to understand and troubleshoot AI behavior."
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/4B6-KEeXjnE",
+          "title": "GOAP System Showcase"
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/goap1.avif",
+          "alt": "GOAP Step 1",
+          "w": 1496,
+          "h": 709
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/goaphistory.avif",
+          "alt": "GOAP History",
+          "w": 1002,
+          "h": 780
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/goaphistory2.avif",
+          "alt": "GOAP History 2",
+          "w": 1265,
+          "h": 884
+        }
+      ]
+    },
+    {
+      "id": "tool-timestone",
+      "title": "Time Stone Plugin",
+      "summary": "Slow, stop and rewind time per actor, including Braid-style ghost replays.",
+      "description": [
+        "A powerful gameplay plugin for Unreal Engine that gives developers a component-based system to manipulate time. The Time Stone Plugin allows for granular control over the flow of time, enabling mechanics like slowing, stopping, and rewinding the game world on a global or per-actor basis.",
+        "This tool provides developers with the core mechanics needed to build mind-bending puzzles and action sequences, saving countless hours of complex programming."
+      ],
+      "links": [
+        {
+          "label": "Find it on",
+          "url": "https://www.fab.com/listings/bc6bc034-87f1-43c1-8d79-c51c1f20023c",
+          "text": "Fab"
+        }
+      ],
+      "featuresHeading": "Key Features",
+      "features": [
+        "<strong>Comprehensive Time Control:</strong> Easily implement slow-motion, pause, and rewind functionalities through a single, versatile component.",
+        "<strong>Actor Isolation System:</strong> Isolate specific characters or objects from the global timeline, allowing them to move at normal speed while the world around them is altered.",
+        "<strong>\"Ghost\" Rewind System:</strong> The plugin's standout feature allows actors to spawn a \"ghost\" of their past selves after a rewind. This ghost replays the exact actions that were just rewound, creating a duplicate actor on the timeline.",
+        "<strong>Braid-Inspired Puzzle Mechanics:</strong> This system makes it easy to create complex puzzles where the player must collaborate with their own past actions to overcome obstacles, inspired by the mechanics of the game Braid."
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/FtAAFcclclw",
+          "title": "Time Stone Plugin Ghost Mechanic"
+        }
+      ]
+    },
+    {
+      "id": "tool-missions",
+      "title": "Arrows Missions System",
+      "summary": "Blueprintable missions and actions with built-in save and load of world state.",
+      "description": [
+        "A flexible and powerful mission system for Unreal Engine, the Arrows Missions System (AMS) provides an easy-to-use framework for creating complex in-game missions. It features a component-based design with dedicated classes for missions and actions, allowing developers to implement custom logic and streamline their workflow. The plugin provides its own system to save and load game progress, including the state of individual actors and mission objectives, ensuring a seamless experience for players.",
+        "This tool simplifies the process of creating engaging and complex missions, saving countless hours of complex programming and ensuring a robust, customizable system for a variety of game genres."
+      ],
+      "featuresHeading": "Key Features",
+      "features": [
+        "<strong>Blueprintable Mission & Action Classes:</strong> The system includes blueprintable mission and action classes with predefined events (e.g., Mission Start, Mission End, Mission Tick) that users can easily hook into for custom logic.",
+        "<strong>Mission Tracking:</strong> A centralized mission tracker allows developers to monitor and manage all active missions in one place.",
+        "<strong>Persistent Game State:</strong> The system utilizes a payload to save and load mission progress, remembering the state of enemies and assets within the game, even after a player exits and reloads.",
+        "<strong>Dynamic Mission Control:</strong> The AMS can dynamically manage mission-related assets, automatically removing them from the game world once a mission is complete to prevent clutter.",
+        "<strong>Location-Based Missions:</strong> Easily create missions that are triggered or progressed based on the player's location."
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/kF8MRevGZ54",
+          "title": "Arrows Missions System [AMS v1.0] Showcase"
+        },
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/tQ2jLuQmo4M",
+          "title": "Arrows Missions System Save and Load"
+        }
+      ]
+    },
+    {
+      "id": "tool-combat",
+      "title": "Arrows Combat System",
+      "summary": "Drop-in combos, parries and blocking, with multiplayer support out of the box.",
+      "description": [
+        "The Arrows Combat System is a powerful and versatile combat plugin for Unreal Engine that provides a feature-rich, out-of-the-box solution for implementing action-based combat. By simply adding a combat component to a character and assigning a pre-configured Fighting Style and Body Attributes, developers can instantly create a fully functional combat system complete with combos, parries, blocking, and damage detection without writing a single line of code.",
+        "The system is designed to be highly customizable, allowing for complete control over the combat feel and flow."
+      ],
+      "links": [
+        {
+          "label": "See the",
+          "url": "https://github.com/NfuDev/ArrowsCombatSystem-Documentation/wiki",
+          "text": "Documentation"
+        },
+        {
+          "label": "Also get it on",
+          "url": "https://www.fab.com/listings/19ba7cb7-9db4-4a09-80eb-753d76297232",
+          "text": "Fab"
+        }
+      ],
+      "featuresHeading": "Key Features",
+      "features": [
+        "<strong>Component-Based Architecture:</strong> The entire system is built around a single component that handles all core combat logic, including input binding, damage handling, and animation-driven features like root motion and motion warping.",
+        "<strong>Highly Customizable Settings:</strong> A wide range of settings can be adjusted directly within the editor to fine-tune the combat experience. These include parameters for target filtering (e.g., \"Nearest Target In Input Direction\"), damage amounts, poise reduction, stun duration, and input handling.",
+        "<strong>Comprehensive Event System:</strong> The component provides a rich set of events to extend the system with custom logic. Developers can hook into events such as On Take Damage, On Got Parried, On Hit Counter Reset, and On Owner Got Executed to trigger unique game behaviors.",
+        "<strong>Built-in Mechanics:</strong> The plugin provides a complete suite of common combat mechanics right out of the box.",
+        "<strong>Out-of-the-Box Multiplayer Support:</strong> The combat works in single player and multiplayer out of the box, no extra work needed."
+      ],
+      "media": [
+        {
+          "type": "video",
+          "src": "Resources/Videos/NewCombatTestV2.h264.mp4",
+          "autoplay": true,
+          "poster": "Resources/img/newcombattestv2-poster.avif",
+          "w": 1280,
+          "h": 720,
+          "av1": "Resources/Videos/NewCombatTestV2.av1.mp4"
+        },
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/FZFTp6ObtQk",
+          "title": "Arrows Combat System : multiplayer and more"
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/combatcom1.avif",
+          "alt": "Combat System 1",
+          "w": 1268,
+          "h": 932
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/combatcom2.avif",
+          "alt": "Combat System 2",
+          "w": 590,
+          "h": 689
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/combatcom3.avif",
+          "alt": "Combat System 3",
+          "w": 531,
+          "h": 446
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/combatcom4.avif",
+          "alt": "Combat System 4",
+          "w": 1383,
+          "h": 803
+        }
+      ]
+    },
+    {
+      "id": "tool-modio",
+      "title": "Arrows Modio Integration Plugin",
+      "summary": "mod.io browsing, downloads, ratings and runtime .pak mounting for Unreal.",
+      "description": [
+        "Arrows Mod.io Integration provides seamless support for integrating mod.io into your project. It enables fetching and displaying mod lists, downloading mod files with progress tracking, and managing user ratings (like, dislike, and remove). The plugin also includes general-purpose .pak mounting logic for loading downloaded content at runtime."
+      ],
+      "media": [
+        {
+          "type": "image",
+          "src": "Resources/img/modio1.avif",
+          "alt": "Modio 1",
+          "w": 1614,
+          "h": 978
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/modio2.avif",
+          "alt": "Modio 2",
+          "w": 1479,
+          "h": 527
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/modio3.avif",
+          "alt": "Modio 3",
+          "w": 1462,
+          "h": 611
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/modio4.avif",
+          "alt": "Modio 4",
+          "w": 1485,
+          "h": 514
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/modio5.avif",
+          "alt": "Modio 5",
+          "w": 995,
+          "h": 756
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/modio6.avif",
+          "alt": "Modio 6",
+          "w": 947,
+          "h": 299
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/modio7.avif",
+          "alt": "Modio 7",
+          "w": 1229,
+          "h": 163
+        }
+      ]
+    }
+  ],
+  "gameProjects": [
+    {
+      "id": "proj-riffxr",
+      "title": "Riff XR",
+      "summary": "Cross-platform VR MMO RPG: combat, GAS class abilities and the UGC SDK.",
+      "description": [
+        "Riff XR is a cross-platform MMO RPG developed at Ron Revog (Los Angeles). I worked as a gameplay engineer on combat systems, RPG class mechanics, and internal tools, including leading development of the UGC SDK that enables player-created content. All gameplay abilities were implemented using Unreal Engine’s Gameplay Ability System (GAS)."
+      ],
+      "links": [
+        {
+          "url": "https://store.steampowered.com/app/2182790/Riff_XR/",
+          "text": "View on Steam",
+          "class": "steam-button"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "src": "Resources/Videos/RiffXR.h264.mp4",
+          "poster": "Resources/img/riffxr-poster.avif",
+          "w": 1280,
+          "h": 720,
+          "av1": "Resources/Videos/RiffXR.av1.mp4"
+        }
+      ]
+    },
+    {
+      "id": "proj-doshka",
+      "title": "Doshka",
+      "summary": "A beat 'em up inspired by Sudanese culture, explored across six prototypes.",
+      "description": [
+        "This project began as a top-down beat 'em up game inspired by Sudanese culture, where a man fights against a corrupt militia. Over time, the game evolved through several iterations as I explored different styles and attempted to define its core identity."
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/L4k9dYhBfDo",
+          "title": "Doshka - Top-down Beat 'em Up"
+        },
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/ssGj4iS866w",
+          "title": "Doshka - 3rd Person Beat 'em Up"
+        },
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/Z1wVWJ9A2GA",
+          "title": "Doshka - 3rd Person Sword Fighter"
+        },
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/58SYyIuS_cI",
+          "title": "Doshka - Network Support"
+        },
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/b0mlR-1IhOo",
+          "title": "Doshka - 3rd Person Shooter"
+        },
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/up65acagZ2A",
+          "title": "Doshka - AI Perception Debugging"
+        }
+      ]
+    },
+    {
+      "id": "proj-braid",
+      "title": "Braid Clone",
+      "summary": "Recreating Braid's time mechanics to put the Time Stone Plugin to the test.",
+      "description": [
+        "This project was a technical demo to test the capabilities of my <strong>Time Stone Plugin</strong> by recreating the core mechanics of the famous puzzle platformer, <em>Braid</em>. The videos below showcase the development process, including the implementation of time-related mechanics."
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/EimKVK3l_dM",
+          "title": "Braid Movement Tutorial"
+        }
+      ]
+    },
+    {
+      "id": "proj-baba",
+      "title": "Baba Is You Clone",
+      "summary": "Rule-rewriting puzzle logic in the style of Baba Is You.",
+      "description": [
+        "This project is a clone of the critically acclaimed puzzle game <em>Baba Is You</em>, where players manipulate the rules of the game to solve puzzles. My implementation focused on replicating the core gameplay loop and rule-based logic."
+      ],
+      "links": [
+        {
+          "label": "See",
+          "url": "https://github.com/NfuDev/BABA_IS_YOU_Refactored",
+          "text": "Source Code"
+        }
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/Ua4gZk7132g",
+          "title": "Baba Is You Clone Showcase"
+        }
+      ]
+    },
+    {
+      "id": "proj-goldenage",
+      "title": "Golden Age",
+      "summary": "Hackathon game made with Future Games, CD Projekt Red and Games Ventures.",
+      "description": [
+        "Golden Age is a game I developed during a hackathon in the UAE in collaboration with Future Games, CD Projekt Red, and Games Ventures."
+      ],
+      "media": [
+        {
+          "type": "video",
+          "src": "Resources/Videos/MirrorsMechanicsHighlight.h264.mp4",
+          "autoplay": true,
+          "poster": "Resources/img/mirrorsmechanicshighlight-poster.avif",
+          "w": 1280,
+          "h": 720,
+          "av1": "Resources/Videos/MirrorsMechanicsHighlight.av1.mp4"
+        },
+        {
+          "type": "video",
+          "src": "Resources/Videos/GoldenAgeTrailler.h264.mp4",
+          "autoplay": false,
+          "poster": "Resources/img/goldenagetrailler-poster.avif",
+          "w": 1280,
+          "h": 720,
+          "av1": "Resources/Videos/GoldenAgeTrailler.av1.mp4"
+        }
+      ]
+    },
+    {
+      "id": "proj-Shanfara",
+      "title": "Unnamed Combat Demo",
+      "summary": "Stylized combat demo built to show off the Arrows Combat System.",
+      "description": [
+        "A project meant to showcase the features the combat system provides to users."
+      ],
+      "media": [
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/I7W88kVUBwE",
+          "title": "Unnamed project: combo showcase"
+        },
+        {
+          "type": "youtube",
+          "src": "https://www.youtube.com/embed/p4pSuT-mjMk",
+          "title": "Unnamed project: hit reaction policies"
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/shanfara1.avif",
+          "alt": "Testing without outlines or toon shaders",
+          "w": 1760,
+          "h": 934
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/shanfara2.avif",
+          "alt": "Testing without outlines or toon shaders (2)",
+          "w": 1354,
+          "h": 818
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/shanfara3.avif",
+          "alt": "Stylized rendering: baked lighting in the character textures",
+          "w": 1151,
+          "h": 994
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/shanfara4.avif",
+          "alt": "Feet IK",
+          "w": 1344,
+          "h": 922
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/shanfara5.avif",
+          "alt": "Death: facial animation closes the eyes, blood stains the player's clothes",
+          "w": 759,
+          "h": 685
+        },
+        {
+          "type": "image",
+          "src": "Resources/img/shanfara6.avif",
+          "alt": "Testing different clothing fabrics",
+          "w": 1901,
+          "h": 992
+        }
+      ]
+    },
+    {
+      "id": "proj-mechanics",
+      "title": "Random Game Mechanics",
+      "summary": "Mirrors, portals, node-based crafting, a boss fight and VR sword duels.",
+      "subsections": [
+        {
+          "title": "AiliA: walkable reflection mechanic",
+          "description": "AiliA is an indie puzzle game with a cool mechanic: you move a mirror to navigate a tough environment and collect items, working together with your reflection. In this video I remade it as a challenge.",
+          "media": [
+            {
+              "type": "youtube",
+              "src": "https://www.youtube.com/embed/GUqfVXl3GEg",
+              "title": "AiliA game reflection mechanic test"
+            }
+          ]
+        },
+        {
+          "title": "Node-based crafting system",
+          "description": "This crafting system was developed for a client's sci-fi game. The goal was to create a futuristic-looking interface that was both functional and visually unique. This node-based approach provides a clear and intuitive way for players to combine components.",
+          "media": [
+            {
+              "type": "youtube",
+              "src": "https://www.youtube.com/embed/G-YnRwNTrO0",
+              "title": "Node-based Crafting System Showcase"
+            }
+          ]
+        },
+        {
+          "title": "3rd-person portal mechanic",
+          "description": "A demonstration of a 3rd person portal mechanic, showcasing the ability to seamlessly transport a character and objects between two points in the game world.",
+          "media": [
+            {
+              "type": "youtube",
+              "src": "https://www.youtube.com/embed/-NNZ1dFlDyA",
+              "title": "3rd Person Portal Mechanic"
+            }
+          ]
+        },
+        {
+          "title": "Old boss fight",
+          "description": "This video showcases an early-stage boss fight mechanic.",
+          "media": [
+            {
+              "type": "youtube",
+              "src": "https://www.youtube.com/embed/JPInAQrm6ig",
+              "title": "Old Boss Fight Showcase"
+            }
+          ]
+        },
+        {
+          "title": "VR sword fight mechanics",
+          "description": "This video showcases a work-in-progress demonstration of my combat system plugin integrated with my AI framework, featuring two AI agents engaged in a duel. It highlights the built-in deflection and parry mechanics that are core components of the combat system.",
+          "media": [
+            {
+              "type": "youtube",
+              "src": "https://www.youtube.com/embed/OADdPwLrYA0",
+              "title": "VR sword fight mechanics"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "art": [
+    {
+      "title": "Character designs",
+      "images": [
+        {
+          "src": "Resources/img/ayoob1.avif",
+          "alt": "Personal project",
+          "w": 1920,
+          "h": 1920
+        },
+        {
+          "src": "Resources/img/ayoob2.avif",
+          "alt": "Personal project",
+          "w": 1920,
+          "h": 1920
+        },
+        {
+          "src": "Resources/img/pirate1.avif",
+          "alt": "Personal project",
+          "w": 1698,
+          "h": 1920
+        },
+        {
+          "src": "Resources/img/pirate2.avif",
+          "alt": "Personal project",
+          "w": 1920,
+          "h": 1920
+        },
+        {
+          "src": "Resources/img/wizzard1.avif",
+          "alt": "Wizard model for a client",
+          "w": 1920,
+          "h": 1920
+        },
+        {
+          "src": "Resources/img/wizzard2.avif",
+          "alt": "Wizard model for a client",
+          "w": 1920,
+          "h": 1920
+        },
+        {
+          "src": "Resources/img/lion1.avif",
+          "alt": "Lion model for a client nft project",
+          "w": 1920,
+          "h": 1920
+        },
+        {
+          "src": "Resources/img/lion2.avif",
+          "alt": "Lion model for a client nft project",
+          "w": 695,
+          "h": 626
+        }
+      ]
+    },
+    {
+      "title": "A Fiverr commission",
+      "description": "The order was a pack of low-poly characters for an indie game with a one-week deadline. I used various techniques to minimize the work and deliver them as fast as possible.",
+      "images": [
+        {
+          "src": "Resources/img/pack1.avif",
+          "alt": "Low-poly character pack: lineup",
+          "w": 923,
+          "h": 853
+        },
+        {
+          "src": "Resources/img/pack2.avif",
+          "alt": "Low-poly character pack: characters 1",
+          "w": 1501,
+          "h": 860
+        },
+        {
+          "src": "Resources/img/pack3.avif",
+          "alt": "Low-poly character pack: characters 2",
+          "w": 1537,
+          "h": 864
+        },
+        {
+          "src": "Resources/img/pack4.avif",
+          "alt": "Low-poly character pack: characters 3",
+          "w": 1544,
+          "h": 869
+        },
+        {
+          "src": "Resources/img/pack5.avif",
+          "alt": "Low-poly character pack: characters 4",
+          "w": 1434,
+          "h": 792
+        },
+        {
+          "src": "Resources/img/topology.avif",
+          "alt": "Low-poly character topology",
+          "w": 885,
+          "h": 786
+        }
+      ]
+    },
+    {
+      "title": "Fiverr Ratings",
+      "description": "While working on Fiverr I reached <strong>Level One Seller</strong> and later earned <strong>Fiverr's Choice</strong>.",
+      "images": [
+        {
+          "src": "Resources/img/leveloneseller.avif",
+          "alt": "Fiverr Level One Seller badge",
+          "w": 483,
+          "h": 584
+        },
+        {
+          "src": "Resources/img/fiverchoice.avif",
+          "alt": "Fiverr's Choice badge",
+          "w": 466,
+          "h": 563
+        },
+        {
+          "src": "Resources/img/fiverstars.avif",
+          "alt": "Fiverr five-star reviews",
+          "w": 306,
+          "h": 293
+        }
+      ]
+    }
+  ]
+}

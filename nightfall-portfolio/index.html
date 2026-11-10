@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Othman Abdalla · Nightfall16 — Unreal Engine Tools & Gameplay Programmer</title>
+  <meta name="description" content="Portfolio of Othman Abdalla (Nightfall16): Unreal Engine editor tools, gameplay plugins, game projects and 3D character art.">
+  <meta name="theme-color" content="#0a0b18">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Othman Abdalla · Nightfall16">
+  <meta property="og:description" content="Unreal Engine editor tools, gameplay plugins, game projects and 3D character art.">
+  <link rel="icon" type="image/avif" href="Resources/img/nightfall.avif">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="preload" href="portfolio.json" as="fetch" crossorigin>
+  <link rel="preload" href="Resources/img/nightfall.avif" as="image" type="image/avif">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <script data-goatcounter="https://othman.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <img src="Resources/img/nightfall.avif" alt="" width="40" height="40">
+        <span>Nightfall<b>16</b></span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#art">Art</a>
+        <a href="#about">About</a>
+        <div class="nav-socials" data-socials></div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Home view -->
+    <div id="view-home">
+      <section class="hero" id="top">
+        <div class="sky" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow" data-handle></p>
+            <h1 class="hero-title" data-name></h1>
+            <p class="hero-role" data-role></p>
+            <p class="hero-tagline" data-tagline></p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#work">View my work
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v13.2l-5.6-5.6L5 13l7 7 7-7-1.4-1.4-5.6 5.6V4z"/></svg>
+              </a>
+              <a class="btn btn-ghost" data-youtube-cta target="_blank" rel="noopener">YouTube channel</a>
+            </div>
+            <dl class="stats" data-stats></dl>
+          </div>
+          <div class="hero-avatar" aria-hidden="true">
+            <div class="orbit"><span></span></div>
+            <img data-avatar alt="" width="512" height="512" fetchpriority="high">
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Selected work</p>
+            <h2 id="work-title">Tools, plugins &amp; games</h2>
+          </header>
+          <div class="filters" role="group" aria-label="Filter projects" data-filters></div>
+          <div class="grid" data-grid></div>
+        </div>
+      </section>
+
+      <section class="section" id="art" aria-labelledby="art-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Nightfall the 3D artist</p>
+            <h2 id="art-title">Character art</h2>
+          </header>
+          <div data-art></div>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">The person behind the tools</h2>
+          </header>
+          <div class="about" data-about></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Project detail view -->
+    <article id="view-project" class="project" hidden></article>
+
+    <noscript><p class="container noscript">This portfolio needs JavaScript to load its projects.</p></noscript>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span data-year></span> <span data-name-plain></span> · Hosted on GitHub Pages</p>
+      <div class="footer-socials" data-socials></div>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button class="lb-btn lb-close" data-lb="close" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7l1.4-1.4 6.3 6.3 6.3-6.3z"/></svg>
+    </button>
+    <button class="lb-btn lb-prev" data-lb="prev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+    </button>
+    <figure class="lb-figure">
+      <img class="lb-img" alt="">
+      <figcaption class="lb-caption"><span class="lb-text"></span><span class="lb-count"></span></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" data-lb="next" aria-label="Next image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg>
+    </button>
+  </dialog>
+</body>
+</html>
