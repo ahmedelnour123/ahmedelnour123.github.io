@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f7f9">
+  <title>Headshot Canvas — 815 × 1060</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f5f6f8;
+      --surface: #ffffff;
+      --ink: #18202b;
+      --muted: #687385;
+      --line: #e2e6ec;
+      --accent: #245fce;
+      --accent-dark: #194da9;
+      --accent-soft: #edf3ff;
+      --success: #16734a;
+      --danger: #b42318;
+      --shadow: 0 18px 50px rgba(23, 35, 56, .08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--page);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, a { font: inherit; }
+    button:focus-visible, a:focus-visible, .drop-zone:focus-visible {
+      outline: 3px solid rgba(36, 95, 206, .28);
+      outline-offset: 3px;
+    }
+
+    .shell {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 42px 0 56px;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      background: #18202b;
+      color: white;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      font-weight: 780;
+    }
+
+    .intro {
+      max-width: 660px;
+      margin: 13px 0 26px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .remove-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 20px;
+      margin: 0 0 26px;
+      background: var(--accent-soft);
+      border: 1px solid #d8e5ff;
+      border-radius: 16px;
+    }
+
+    .remove-copy { display: flex; align-items: flex-start; gap: 13px; }
+    .remove-icon {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      color: var(--accent);
+      background: #fff;
+      border-radius: 12px;
+    }
+    .remove-copy strong { display: block; margin: 1px 0 4px; font-size: 14px; }
+    .remove-copy p { margin: 0; color: #52627b; font-size: 13px; line-height: 1.5; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 44px;
+      padding: 0 16px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background .15s ease, border-color .15s ease, transform .15s ease;
+    }
+    .button:active { transform: translateY(1px); }
+    .button-primary { color: white; background: var(--accent); }
+    .button-primary:hover { background: var(--accent-dark); }
+    .button-secondary { color: #344054; background: white; border-color: var(--line); }
+    .button-secondary:hover { background: #f9fafb; border-color: #c9d0da; }
+    .button:disabled { opacity: .42; cursor: not-allowed; transform: none; }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+      align-items: start;
+      gap: 22px;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .upload-panel { padding: 22px; }
+    .section-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0 0 15px;
+    }
+    .section-heading h2 { margin: 0; font-size: 15px; letter-spacing: -.01em; }
+    .step-label {
+      color: #8290a2;
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .drop-zone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 236px;
+      padding: 24px;
+      border: 1.5px dashed #c9d2df;
+      border-radius: 14px;
+      background: #fbfcfe;
+      text-align: center;
+      cursor: pointer;
+      transition: background .15s ease, border-color .15s ease;
+    }
+    .drop-zone:hover, .drop-zone.is-dragging { background: #f1f6ff; border-color: var(--accent); }
+    .upload-icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 14px;
+      border-radius: 16px;
+      color: var(--accent);
+      background: #edf3ff;
+    }
+    .drop-title { margin: 0 0 6px; font-size: 15px; font-weight: 750; }
+    .drop-subtitle { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .drop-zone .button { margin-top: 17px; pointer-events: none; }
+    .file-types { margin: 12px 0 0; color: #8993a2; font-size: 11px; text-align: center; }
+    #fileInput { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; clip-path: inset(50%); }
+
+    .current-file {
+      display: none;
+      align-items: center;
+      gap: 11px;
+      margin-top: 17px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+    .current-file.visible { display: flex; }
+    .file-badge {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      flex: 0 0 auto;
+      color: var(--success);
+      background: #eaf7f0;
+      border-radius: 10px;
+    }
+    .file-details { min-width: 0; flex: 1; }
+    .file-name { overflow: hidden; color: #344054; font-size: 13px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+    .file-meta { margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .text-button { padding: 7px 5px; border: 0; background: transparent; color: #667085; font-size: 12px; font-weight: 700; cursor: pointer; }
+    .text-button:hover { color: var(--danger); }
+
+    .message {
+      display: none;
+      margin-top: 13px;
+      padding: 11px 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .message.visible { display: block; }
+    .message.error { color: #912018; background: #fff1f0; border: 1px solid #ffd6d2; }
+    .message.warning { color: #81520a; background: #fff8e8; border: 1px solid #f7e3b5; }
+    .message.info { color: #315b9f; background: #eff5ff; border: 1px solid #d7e5ff; }
+
+    .preview-panel { padding: 20px; }
+    .preview-heading { margin-bottom: 14px; }
+    .dimension-pill {
+      padding: 5px 8px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: #5f6b7b;
+      font-size: 11px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .canvas-wrap {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      padding: 15px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f0f2f5;
+    }
+    canvas {
+      display: block;
+      width: min(100%, 315px);
+      height: auto;
+      aspect-ratio: 815 / 1060;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(25, 35, 50, .13);
+      outline: none;
+    }
+    canvas.is-draggable {
+      cursor: grab;
+      touch-action: none;
+    }
+    canvas.is-dragging { cursor: grabbing; }
+    canvas:focus-visible { outline: 3px solid rgba(36, 95, 206, .45); outline-offset: 3px; }
+    .position-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .position-hint { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+    .position-toolbar .button { min-height: 36px; padding: 0 11px; font-size: 12px; }
+    .canvas-empty {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: #a0a9b6;
+      pointer-events: none;
+    }
+    .canvas-empty span { font-size: 12px; font-weight: 650; }
+    .preview-caption { margin: 12px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; text-align: center; }
+    .download-area { display: grid; gap: 9px; margin-top: 17px; }
+    .download-area .button { width: 100%; min-height: 48px; }
+    .privacy-note { display: flex; justify-content: center; align-items: center; gap: 6px; margin: 12px 0 0; color: #8993a2; font-size: 11px; text-align: center; }
+
+    .footer { margin-top: 22px; color: #8a94a3; font-size: 11px; text-align: center; }
+
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 28px, 540px); padding: 27px 0 38px; }
+      .intro { margin-bottom: 20px; font-size: 14px; }
+      .remove-card { align-items: flex-start; flex-direction: column; gap: 14px; padding: 16px; margin-bottom: 18px; }
+      .remove-card > .button { width: 100%; }
+      .workspace { grid-template-columns: 1fr; gap: 15px; }
+      .upload-panel, .preview-panel { padding: 17px; }
+      .drop-zone { min-height: 205px; }
+      .preview-panel { order: 2; }
+      .upload-panel { order: 1; }
+      canvas { width: min(100%, 290px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topline">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>Headshot canvas</span>
+    </div>
+
+    <h1>Prepare your photo.</h1>
+    <p class="intro">Upload a front-facing headshot and place it on a white 815 × 1060 canvas. Your image will keep its proportions, fill the canvas width, and sit flush with the bottom edge.</p>
+
+    <section class="remove-card" aria-label="Prepare your image background">
+      <div class="remove-copy">
+        <span class="remove-icon" aria-hidden="true">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5 7.5 3h9L21 7.5v9L16.5 21h-9L3 16.5z"/><path d="M8 14.5c1.2-2.2 2.3-3.3 4-3.3s2.8 1.1 4 3.3"/><circle cx="12" cy="8.5" r="1.6"/></svg>
+        </span>
+        <div>
+          <strong>Use an image with its background already removed or set to pure white.</strong>
+          <p>Need help preparing it? remove.bg can remove the background before you upload your photo here.</p>
+        </div>
+      </div>
+      <a class="button button-secondary" href="https://www.remove.bg/" target="_blank" rel="noopener noreferrer">
+        Remove background
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"/></svg>
+      </a>
+    </section>
+
+    <div class="workspace">
+      <section class="panel upload-panel" aria-labelledby="uploadTitle">
+        <div class="section-heading">
+          <h2 id="uploadTitle">Upload your headshot</h2>
+          <span class="step-label">Step 01</span>
+        </div>
+
+        <input id="fileInput" type="file" accept="image/*">
+        <label class="drop-zone" id="dropZone" for="fileInput" tabindex="0" role="button" aria-label="Choose an image or drop one here">
+          <span class="upload-icon" aria-hidden="true">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="m7 9 5-5 5 5"/><path d="M20 16.5v2A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-2"/></svg>
+          </span>
+          <p class="drop-title">Choose a photo to get started</p>
+          <p class="drop-subtitle">Browse your device or drag and drop an image here.</p>
+          <span class="button button-primary">Choose image</span>
+        </label>
+        <p class="file-types">JPG, PNG, WebP and other browser-supported image formats</p>
+
+        <div class="current-file" id="currentFile" aria-live="polite">
+          <span class="file-badge" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg>
+          </span>
+          <div class="file-details">
+            <div class="file-name" id="fileName"></div>
+            <div class="file-meta" id="fileMeta"></div>
+          </div>
+          <button class="text-button" id="removeImage" type="button">Remove</button>
+        </div>
+
+        <div class="message warning" id="cropWarning" role="status"></div>
+        <div class="message error" id="errorMessage" role="alert"></div>
+      </section>
+
+      <section class="panel preview-panel" aria-labelledby="previewTitle">
+        <div class="section-heading preview-heading">
+          <h2 id="previewTitle">Your final image</h2>
+          <span class="dimension-pill">815 × 1060 px</span>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="outputCanvas" width="815" height="1060" tabindex="0" aria-label="Preview of your image on the 815 by 1060 white canvas. Drag to adjust its position, or use the arrow keys."></canvas>
+          <div class="canvas-empty" id="canvasEmpty" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M4 8h16"/><path d="M9 21V8"/></svg>
+            <span>Preview appears here</span>
+          </div>
+        </div>
+        <div class="position-toolbar">
+          <p class="position-hint">Drag the photo to fine-tune its position.</p>
+          <button class="button button-secondary" id="resetPositionButton" type="button" disabled>Reset position</button>
+        </div>
+        <p class="preview-caption" id="previewCaption">The downloaded PNG will be exactly 815 × 1060 pixels.</p>
+        <div class="download-area">
+          <button class="button button-primary" id="downloadButton" type="button" disabled>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 17v3h14v-3"/></svg>
+            Download PNG
+          </button>
+          <button class="button button-secondary" id="changeButton" type="button" disabled>Choose another photo</button>
+        </div>
+        <p class="privacy-note">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/></svg>
+          Your photo is processed in this browser and is not uploaded to a server.
+        </p>
+      </section>
+    </div>
+
+    <p class="footer">Designed for a 815 × 1060 pixel output.</p>
+  </main>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const OUTPUT_WIDTH = 815;
+      const OUTPUT_HEIGHT = 1060;
+      const fileInput = document.getElementById('fileInput');
+      const dropZone = document.getElementById('dropZone');
+      const canvas = document.getElementById('outputCanvas');
+      const ctx = canvas.getContext('2d', { alpha: false });
+      const currentFile = document.getElementById('currentFile');
+      const fileName = document.getElementById('fileName');
+      const fileMeta = document.getElementById('fileMeta');
+      const cropWarning = document.getElementById('cropWarning');
+      const errorMessage = document.getElementById('errorMessage');
+      const canvasEmpty = document.getElementById('canvasEmpty');
+      const previewCaption = document.getElementById('previewCaption');
+      const downloadButton = document.getElementById('downloadButton');
+      const changeButton = document.getElementById('changeButton');
+      const removeButton = document.getElementById('removeImage');
+      const resetPositionButton = document.getElementById('resetPositionButton');
+
+      let activeImage = null;
+      let activeFileName = 'headshot.png';
+      let imageOffsetX = 0;
+      let imageOffsetY = 0;
+      let dragState = null;
+      const MAX_DRAG_X = 120;
+      const MAX_DRAG_Y = 140;
+
+      function drawBlankCanvas() {
+        ctx.save();
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, OUTPUT_WIDTH, OUTPUT_HEIGHT);
+        ctx.restore();
+      }
+
+      function formatBytes(bytes) {
+        if (!Number.isFinite(bytes) || bytes <= 0) return '';
+        if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
+        return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+      }
+
+      function showMessage(element, message) {
+        element.textContent = message;
+        element.classList.add('visible');
+      }
+
+      function hideMessage(element) {
+        element.textContent = '';
+        element.classList.remove('visible');
+      }
+
+      function drawImageToCanvas(image, width, height) {
+        drawBlankCanvas();
+
+        // Keep the suggested placement: fill the canvas width and anchor at the bottom.
+        // User adjustments are applied as small offsets from that starting position.
+        const scale = OUTPUT_WIDTH / width;
+        const renderedHeight = height * scale;
+        const suggestedY = OUTPUT_HEIGHT - renderedHeight;
+        const x = imageOffsetX;
+        const y = suggestedY + imageOffsetY;
+
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+        ctx.drawImage(image, x, y, OUTPUT_WIDTH, renderedHeight);
+
+        canvasEmpty.style.display = 'none';
+        canvas.classList.add('is-draggable');
+        downloadButton.disabled = false;
+        changeButton.disabled = false;
+        resetPositionButton.disabled = false;
+
+        if (renderedHeight > OUTPUT_HEIGHT + 0.5) {
+          showMessage(cropWarning, 'This photo is taller than the canvas after scaling. Its top portion may be outside the canvas. Drag it to adjust the visible area.');
+          previewCaption.textContent = 'Drag the photo to fine-tune the crop. The downloaded PNG will be exactly 815 × 1060 pixels.';
+        } else {
+          hideMessage(cropWarning);
+          previewCaption.textContent = 'Drag the photo to fine-tune its position. The downloaded PNG will be exactly 815 × 1060 pixels.';
+        }
+      }
+
+      async function decodeFile(file) {
+        // ImageBitmap is generally faster and applies image orientation where supported.
+        if (typeof createImageBitmap === 'function') {
+          try {
+            const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' });
+            if (!bitmap.width || !bitmap.height) {
+              bitmap.close?.();
+              throw new Error('The image has no readable dimensions.');
+            }
+            return {
+              source: bitmap,
+              width: bitmap.width,
+              height: bitmap.height,
+              cleanup: () => bitmap.close?.()
+            };
+          } catch (bitmapError) {
+            // Fall back to the browser's HTML image decoder (useful on some mobile browsers).
+          }
+        }
+
+        const objectUrl = URL.createObjectURL(file);
+        try {
+          const image = new Image();
+          image.decoding = 'async';
+          await new Promise((resolve, reject) => {
+            image.onload = resolve;
+            image.onerror = () => reject(new Error('This image format could not be opened by your browser.'));
+            image.src = objectUrl;
+          });
+          if (!image.naturalWidth || !image.naturalHeight) {
+            throw new Error('The image has no readable dimensions.');
+          }
+          return {
+            source: image,
+            width: image.naturalWidth,
+            height: image.naturalHeight,
+            cleanup: () => URL.revokeObjectURL(objectUrl)
+          };
+        } catch (error) {
+          URL.revokeObjectURL(objectUrl);
+          throw error;
+        }
+      }
+
+      async function loadFile(file) {
+        if (!file) return;
+        hideMessage(errorMessage);
+
+        if (file.type && !file.type.startsWith('image/')) {
+          showMessage(errorMessage, 'Please choose an image file.');
+          return;
+        }
+
+        let decoded;
+        try {
+          decoded = await decodeFile(file);
+        } catch (error) {
+          showMessage(errorMessage, error.message || 'We could not open that image. Try a JPG or PNG file.');
+          return;
+        }
+
+        if (activeImage?.cleanup) activeImage.cleanup();
+        activeImage = decoded;
+        activeFileName = file.name || 'headshot.png';
+        imageOffsetX = 0;
+        imageOffsetY = 0;
+
+        drawImageToCanvas(decoded.source, decoded.width, decoded.height);
+        currentFile.classList.add('visible');
+        fileName.textContent = activeFileName;
+        fileMeta.textContent = `${decoded.width.toLocaleString()} × ${decoded.height.toLocaleString()} px${file.size ? ` · ${formatBytes(file.size)}` : ''}`;
+        fileInput.value = '';
+      }
+
+      function reset() {
+        if (activeImage?.cleanup) activeImage.cleanup();
+        activeImage = null;
+        imageOffsetX = 0;
+        imageOffsetY = 0;
+        dragState = null;
+        canvas.classList.remove('is-draggable', 'is-dragging');
+        drawBlankCanvas();
+        canvasEmpty.style.display = 'flex';
+        resetPositionButton.disabled = true;
+        currentFile.classList.remove('visible');
+        fileName.textContent = '';
+        fileMeta.textContent = '';
+        hideMessage(errorMessage);
+        hideMessage(cropWarning);
+        previewCaption.textContent = 'The downloaded PNG will be exactly 815 × 1060 pixels.';
+        downloadButton.disabled = true;
+        changeButton.disabled = true;
+        fileInput.value = '';
+      }
+
+      function resetPosition() {
+        if (!activeImage) return;
+        imageOffsetX = 0;
+        imageOffsetY = 0;
+        drawImageToCanvas(activeImage.source, activeImage.width, activeImage.height);
+      }
+
+      function clamp(value, min, max) {
+        return Math.min(max, Math.max(min, value));
+      }
+
+      function beginDrag(event) {
+        if (!activeImage || event.button > 0) return;
+        event.preventDefault();
+        const rect = canvas.getBoundingClientRect();
+        dragState = {
+          pointerId: event.pointerId,
+          startX: event.clientX,
+          startY: event.clientY,
+          startOffsetX: imageOffsetX,
+          startOffsetY: imageOffsetY,
+          scaleX: OUTPUT_WIDTH / rect.width,
+          scaleY: OUTPUT_HEIGHT / rect.height
+        };
+        canvas.classList.add('is-dragging');
+        canvas.setPointerCapture?.(event.pointerId);
+      }
+
+      function moveDrag(event) {
+        if (!dragState || event.pointerId !== dragState.pointerId || !activeImage) return;
+        imageOffsetX = clamp(
+          dragState.startOffsetX + (event.clientX - dragState.startX) * dragState.scaleX,
+          -MAX_DRAG_X,
+          MAX_DRAG_X
+        );
+        imageOffsetY = clamp(
+          dragState.startOffsetY + (event.clientY - dragState.startY) * dragState.scaleY,
+          -MAX_DRAG_Y,
+          MAX_DRAG_Y
+        );
+        drawImageToCanvas(activeImage.source, activeImage.width, activeImage.height);
+        canvas.classList.add('is-draggable', 'is-dragging');
+      }
+
+      function endDrag(event) {
+        if (!dragState || (event && event.pointerId !== dragState.pointerId)) return;
+        const pointerId = dragState.pointerId;
+        dragState = null;
+        canvas.classList.remove('is-dragging');
+        if (canvas.hasPointerCapture?.(pointerId)) canvas.releasePointerCapture(pointerId);
+      }
+
+      canvas.addEventListener('pointerdown', beginDrag);
+      canvas.addEventListener('pointermove', moveDrag);
+      canvas.addEventListener('pointerup', endDrag);
+      canvas.addEventListener('pointercancel', endDrag);
+      canvas.addEventListener('lostpointercapture', () => {
+        dragState = null;
+        canvas.classList.remove('is-dragging');
+      });
+      canvas.addEventListener('keydown', (event) => {
+        if (!activeImage || !['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+        event.preventDefault();
+        const amount = event.shiftKey ? 30 : 10;
+        if (event.key === 'ArrowLeft') imageOffsetX = clamp(imageOffsetX - amount, -MAX_DRAG_X, MAX_DRAG_X);
+        if (event.key === 'ArrowRight') imageOffsetX = clamp(imageOffsetX + amount, -MAX_DRAG_X, MAX_DRAG_X);
+        if (event.key === 'ArrowUp') imageOffsetY = clamp(imageOffsetY - amount, -MAX_DRAG_Y, MAX_DRAG_Y);
+        if (event.key === 'ArrowDown') imageOffsetY = clamp(imageOffsetY + amount, -MAX_DRAG_Y, MAX_DRAG_Y);
+        drawImageToCanvas(activeImage.source, activeImage.width, activeImage.height);
+        canvas.focus();
+      });
+
+      resetPositionButton.addEventListener('click', resetPosition);
+
+      function chooseFile() {
+        fileInput.click();
+      }
+
+      fileInput.addEventListener('change', (event) => {
+        const file = event.target.files && event.target.files[0];
+        if (file) loadFile(file);
+      });
+
+      changeButton.addEventListener('click', chooseFile);
+      removeButton.addEventListener('click', reset);
+
+      // The label opens the picker on tap/click. Keyboard support is added for the focusable drop area.
+      dropZone.addEventListener('keydown', (event) => {
+        if (event.target !== dropZone) return;
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          chooseFile();
+        }
+      });
+
+      ['dragenter', 'dragover'].forEach((eventName) => {
+        dropZone.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          dropZone.classList.add('is-dragging');
+        });
+      });
+      ['dragleave', 'drop'].forEach((eventName) => {
+        dropZone.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          dropZone.classList.remove('is-dragging');
+        });
+      });
+      dropZone.addEventListener('drop', (event) => {
+        const file = event.dataTransfer?.files?.[0];
+        if (file) loadFile(file);
+      });
+
+      downloadButton.addEventListener('click', () => {
+        if (!activeImage) return;
+
+        const saveBlob = (blob) => {
+          if (!blob) {
+            showMessage(errorMessage, 'The browser could not create the PNG. Please try another browser.');
+            return;
+          }
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'resized photo.png';
+          link.style.display = 'none';
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          // Delay revocation so mobile browsers have time to start the download.
+          window.setTimeout(() => URL.revokeObjectURL(url), 30000);
+        };
+
+        try {
+          if (typeof canvas.toBlob === 'function') {
+            canvas.toBlob(saveBlob, 'image/png');
+          } else {
+            const dataUrl = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            link.href = dataUrl;
+            link.download = 'resized photo.png';
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+          }
+        } catch (error) {
+          showMessage(errorMessage, 'The image could not be exported. Try a smaller source image or another browser.');
+        }
+      });
+
+      drawBlankCanvas();
+    })();
+  </script>
+</body>
+</html>
